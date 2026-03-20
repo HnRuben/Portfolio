@@ -63,12 +63,6 @@
                   <div class="anecdote__content">
                     <h3 class="anecdote__title">{{ a.title }}</h3>
                     <p class="anecdote__text">{{ a.content }}</p>
-                    @if (a.result) {
-                      <div class="anecdote__result">
-                        <span class="label" style="color:var(--color-tech)">✅ Résultat</span>
-                        <p>{{ a.result }}</p>
-                      </div>
-                    }
                     @if (a.realisationId) {
                       <a [routerLink]="['/realisations', a.realisationId]" class="anecdote__link">
                         Voir la réalisation associée →

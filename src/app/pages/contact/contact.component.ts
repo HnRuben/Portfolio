@@ -13,22 +13,22 @@ import { RevealDirective } from '../../shared/directives/scroll-reveal.directive
 export class ContactComponent {
   copied = signal(false);
 
-  readonly email = 'ruben.hayoun@example.com'; // À remplacer
+  readonly email = 'rubenh4502@gmail.com';
 
   readonly contactLinks = [
     {
       icon: '💼',
       label: 'LinkedIn',
-      value: 'linkedin.com/in/ruben-hayoun',
-      href: 'https://linkedin.com/in/ruben-hayoun',
+      value: 'linkedin.com/in/ruben-hayoun/',
+      href: 'https://www.linkedin.com/in/ruben-hayoun-b87903275/',
       color: '#0A66C2',
       colorLight: '#EEF5FF',
     },
     {
       icon: '🐙',
       label: 'GitHub',
-      value: 'github.com/rubenhayoun',
-      href: 'https://github.com/rubenhayoun',
+      value: 'github.com/HnRuben',
+      href: 'https://github.com/HnRuben',
       color: '#24292F',
       colorLight: '#F6F8FA',
     },

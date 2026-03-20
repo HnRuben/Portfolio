@@ -15,7 +15,7 @@ import { Competence } from '../../../core/models';
       [class.skill-badge--human]="competence.type === 'human'"
       [style.--badge-color]="competence.color"
       [style.--badge-bg]="competence.colorLight"
-      [title]="competence.title + ' — ' + competence.level"
+      [title]="competence.title + ', ' + competence.level"
     >
       <span class="skill-badge__icon">{{ competence.icon }}</span>
       <span class="skill-badge__title">{{ competence.title }}</span>

@@ -4,17 +4,17 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
-    title: 'Ruben Hayoun — Portfolio'
+    title: 'Ruben Hayoun, Portfolio'
   },
   {
     path: 'a-propos',
     loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent),
-    title: 'À propos — Ruben Hayoun'
+    title: 'À propos, Ruben Hayoun'
   },
   {
     path: 'competences',
     loadComponent: () => import('./pages/competences/competences.component').then(m => m.CompetencesComponent),
-    title: 'Compétences — Ruben Hayoun'
+    title: 'Compétences, Ruben Hayoun'
   },
   {
     path: 'competences/:id',
@@ -23,7 +23,7 @@ export const routes: Routes = [
   {
     path: 'realisations',
     loadComponent: () => import('./pages/realisations/realisations.component').then(m => m.RealisationsComponent),
-    title: 'Réalisations — Ruben Hayoun'
+    title: 'Réalisations, Ruben Hayoun'
   },
   {
     path: 'realisations/:id',
@@ -32,12 +32,12 @@ export const routes: Routes = [
   {
     path: 'parcours',
     loadComponent: () => import('./pages/parcours/parcours.component').then(m => m.ParcoursComponent),
-    title: 'Parcours — Ruben Hayoun'
+    title: 'Parcours, Ruben Hayoun'
   },
   {
     path: 'contact',
     loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent),
-    title: 'Contact — Ruben Hayoun'
+    title: 'Contact, Ruben Hayoun'
   },
   {
     path: '**',
