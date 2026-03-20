@@ -1,7 +1,6 @@
 // ── HERO ─────────────────────────────────────────────────────
 .hero {
   position: relative;
-  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -163,29 +162,6 @@
     color: var(--color-text-muted);
     font-weight: 600;
   }
-
-  // Scroll indicator
-  &__scroll {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem;
-    color: var(--color-text-light);
-    z-index: 1;
-
-    @media (max-width: 768px) { display: none; }
-  }
-
-  &__scroll-line {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, var(--color-text-light), transparent);
-    animation: scrollPulse 2s ease-in-out infinite;
-  }
 }
 
 // ── REALISATIONS GRID ────────────────────────────────────────
@@ -319,14 +295,12 @@
     letter-spacing: -.01em;
     color: var(--color-text);
     margin-bottom: .15rem;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   &__desc {
     color: var(--color-text-muted);
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -373,7 +347,3 @@
   100% { border-radius: 40% 60% 55% 45% / 45% 55% 60% 40%; }
 }
 
-@keyframes scrollPulse {
-  0%, 100% { opacity: .4; transform: scaleY(1); }
-  50%       { opacity: 1;  transform: scaleY(1.2); }
-}
