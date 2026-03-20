@@ -12,11 +12,11 @@ import { RevealDirective } from '../../shared/directives/scroll-reveal.directive
 })
 export class AboutComponent {
   readonly values = [
-    { icon: '🎯', label: 'Rigueur', desc: 'Du code propre, testé et maintenable.' },
-    { icon: '🚀', label: 'Curiosité', desc: 'Toujours en veille sur les nouvelles technologies.' },
-    { icon: '🤝', label: 'Collaboration', desc: 'L\'équipe avant tout, le code est un sport collectif.' },
-    { icon: '💡', label: 'Créativité', desc: 'Trouver des solutions élégantes à des problèmes complexes.' },
+    { icon: '🚀', label: 'Curiosité', desc: 'Apprendre en faisant, explorer de nouvelles technologies et sortir régulièrement de ma zone de confort.' },
+    { icon: '🤝', label: 'Collaboration', desc: 'Les meilleurs projets naissent d\'une équipe soudée. Le code est un sport collectif.' },
+    { icon: '🎯', label: 'Rigueur', desc: 'Prendre le temps de bien comprendre un problème avant de proposer une solution, même si ça demande davantage d\'efforts.' },
+    { icon: '💬', label: 'Communication', desc: 'Adapter son discours à ses interlocuteurs, qu\'ils soient techniques ou non.' },
   ];
 
-  readonly interests = ['Développement Web', 'Open Source', 'Algorithmes', 'Jeux vidéo', 'Architecture logicielle', 'IA & ML'];
+  readonly interests = ['Basketball & Vélo', 'Création graphique', 'Jeux vidéo', 'IA & Machine Learning', 'Architecture logicielle', 'Open Source'];
 }

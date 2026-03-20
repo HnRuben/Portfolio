@@ -161,12 +161,12 @@ export class DataService {
         },
         {
           title: '[ À RÉDIGER — Titre de l\'anecdote 2 ]',
-          content: '[ À RÉDIGER — L\'utilisation d\'Angular dans le gestionnaire de bot Discord. ]',
+          content: '[ À RÉDIGER — L\'utilisation d\'Angular dans ce portfolio personnel. ]',
           result: '[ À RÉDIGER — Ce que ça a apporté au projet. ]',
-          realisationId: 'bot-discord'
+          realisationId: 'm-a-web'
         }
       ],
-      relatedRealisations: ['m-a-web', 'bot-discord']
+      relatedRealisations: ['m-a-web']
     },
 
     // ── HUMAINES ─────────────────────────────────────────────────────────────
@@ -206,19 +206,19 @@ export class DataService {
       color: '#0284C7',
       colorLight: '#F0F9FF',
       shortDescription: 'Capacité à collaborer efficacement, à communiquer clairement et à contribuer à la dynamique d\'équipe.',
-      definition: '[ À RÉDIGER — Je définis le travail d\'équipe comme compétence transversale : coordination, communication et synergie dans un contexte professionnel. ]',
-      context: '[ À RÉDIGER — Mon expérience du travail en équipe en alternance, dans des projets de groupe et lors d\'événements. ]',
+      definition: 'Le travail d\'équipe, c\'est bien plus que collaborer sur un projet. C\'est la capacité à créer une synergie où chaque membre apporte sa valeur ajoutée tout en s\'adaptant aux autres. Dans le développement informatique, cela implique de communiquer clairement sur des aspects techniques parfois complexes, de gérer les désaccords de manière constructive, et de maintenir une dynamique positive même sous pression. Après bientôt cinq années de projets variés à l\'école et en entreprise, j\'ai appris que le succès d\'un projet ne dépend pas uniquement des compétences techniques individuelles, mais surtout de la capacité de l\'équipe à fonctionner comme un organisme cohérent.',
+      context: 'J\'ai développé cette compétence progressivement, à travers des expériences complémentaires. Chez Aubay, j\'ai découvert la réalité du travail en équipe dans un contexte professionnel : traduire les besoins des équipes RH en spécifications techniques, maintenir un dialogue constant avec des profils non-techniques, et contribuer à une équipe de développement agile. Mes projets à l\'ESIEA m\'ont appris une autre dimension essentielle : la confiance dans les compétences des coéquipiers. Sur DarwinSimulator, j\'ai réalisé qu\'en voulant tout contrôler, je freinais la créativité de l\'équipe. L\'organisation de Dessin Vivant m\'a enfin convaincu de la force de la complémentarité des rôles dans un binôme.',
       anecdotes: [
         {
-          title: '[ À RÉDIGER — Titre de l\'anecdote 1 ]',
-          content: '[ À RÉDIGER — Une situation de collaboration en équipe sur un projet d\'entreprise. ]',
-          result: '[ À RÉDIGER — Le résultat collectif et ma contribution. ]',
+          title: 'La fonctionnalité d\'historisation chez Aubay',
+          content: 'Lors du développement d\'une fonctionnalité d\'historisation des candidatures sur FabTools, la livraison ne correspondait pas aux attentes des recruteurs. Plutôt que de rejeter la faute sur un manque de clarté des spécifications, j\'ai proposé d\'organiser une session de travail collaborative réunissant toutes les parties prenantes — développeurs, campus managers et recruteurs. Chacun a pu exprimer sa vision, et nous avons co-construit la solution finale ensemble.',
+          result: 'Cette approche m\'a fait comprendre que le travail d\'équipe ne se limite pas à l\'équipe technique : il s\'étend à tous les utilisateurs finaux. La fonctionnalité livrée au second cycle a pleinement satisfait les recruteurs, et cette méthode de collaboration est depuis devenue un réflexe pour moi.',
           realisationId: 'm-a-web'
         },
         {
-          title: '[ À RÉDIGER — Titre de l\'anecdote 2 ]',
-          content: '[ À RÉDIGER — Organisation d\'une équipe lors de l\'événement Dessin Vivant. ]',
-          result: '[ À RÉDIGER — Le succès de l\'événement grâce au travail d\'équipe. ]',
+          title: 'La complémentarité sur l\'événement Dessin Vivant',
+          content: 'Pour organiser Dessin Vivant, mon camarade et moi avons adopté une répartition naturelle des rôles sans règle formelle : je me suis concentré sur la création des visuels, des affiches et la communication digitale, tandis qu\'il prenait en charge les relations partenaires et la coordination logistique. Cette lecture honnête de nos forces respectives a été déterminante pour la fluidité de l\'organisation.',
+          result: '47 participants sur les 50 attendus, et des retours très positifs de notre équipe pédagogique. Cette expérience m\'a convaincu que la complémentarité bien gérée vaut plus que la répartition artificielle des tâches à parts égales.',
           realisationId: 'dessin-vivant'
         }
       ],
@@ -284,110 +284,113 @@ export class DataService {
     {
       id: 'm-a-web',
       title: 'Maintenance et amélioration d\'application Web en entreprise',
-      shortTitle: 'App Web — Entreprise',
+      shortTitle: 'FabTools — Aubay',
       emoji: '🏢',
       type: 'entreprise',
       period: '2024 – 2026',
       coverGradient: 'linear-gradient(135deg, #0D9488 0%, #0284C7 100%)',
-      shortDescription: 'Développement et amélioration continue d\'une application web métier dans le cadre de mon alternance.',
-      context: '[ À RÉDIGER — Dans quel contexte ce projet a été réalisé : l\'entreprise, l\'équipe, la situation existante. ]',
-      objective: '[ À RÉDIGER — Quel était l\'objectif de l\'entreprise pour ce projet, et quel était mon rôle spécifique. ]',
+      shortDescription: 'Maintenance corrective et évolutive de FabTools, application web interne de gestion du recrutement chez Aubay, entreprise de services numériques.',
+      context: 'Dans le cadre de mon alternance de deux ans au sein d\'Aubay, entreprise de services numériques, j\'ai intégré une équipe de développement travaillant sur FabTools (FTO), une application web interne dédiée à la gestion du recrutement de stagiaires et alternants au sein de "la Fabrique Aubay". L\'application, développée en Angular pour le frontend et Java Spring pour le backend, présentait des anomalies et des besoins d\'évolution remontés régulièrement par les équipes RH, campus managers et recruteurs qui l\'utilisaient au quotidien.',
+      objective: 'Mon rôle consistait à assurer la maintenance corrective et évolutive de FabTools, aussi bien sur le backend Java Spring que sur le frontend Angular. L\'objectif était d\'optimiser les performances globales de l\'application, de corriger les anomalies critiques remontées par les utilisateurs, et de développer de nouvelles fonctionnalités pour mieux répondre aux besoins métiers des équipes RH.',
       actions: [
-        '[ À RÉDIGER — Action 1 : décrire une action concrète menée sur ce projet. ]',
-        '[ À RÉDIGER — Action 2 : décrire une deuxième action. ]',
-        '[ À RÉDIGER — Action 3 : décrire une troisième action. ]'
+        'Résolution d\'anomalies critiques remontées par les utilisateurs, en diagnostiquant les causes profondes et en livrant des correctifs testés.',
+        'Développement et enrichissement du système d\'historisation des candidatures, permettant de tracer intégralement le parcours d\'un candidat de sa candidature initiale jusqu\'à son intégration.',
+        'Optimisation du workflow de recrutement autour de la table principale Candidacy, représentant l\'évolution d\'une candidature à travers ses différentes étapes métier.',
+        'Collaboration étroite avec les campus managers, recruteurs et responsables RH pour comprendre leurs besoins et adapter l\'application à l\'évolution de leurs méthodes de travail.'
       ],
-      team: '[ À RÉDIGER — Les parties prenantes du projet : équipe, rôles de chacun, mode de collaboration. ]',
-      stakes: '[ À RÉDIGER — Les enjeux financiers, humains, techniques du projet. ]',
-      results: '[ À RÉDIGER — Les résultats en faits précis : productivité, qualité, délais, satisfaction client... ]',
+      team: 'J\'ai intégré une équipe de développement agile chez Aubay, en collaboration directe avec les équipes métiers (RH, campus managers, recruteurs) qui étaient à la fois commanditaires et utilisateurs finaux de l\'application. Les échanges réguliers avec ces profils non-techniques m\'ont appris à adapter ma communication et à centrer le développement sur les besoins réels plutôt que sur les contraintes techniques.',
+      stakes: 'FabTools est un outil stratégique pour Aubay, utilisé quotidiennement par les équipes en charge du recrutement de la Fabrique. Une instabilité ou un manque de fonctionnalité impactait directement la fluidité des processus RH et la qualité de l\'expérience candidat. L\'enjeu était donc à la fois technique (robustesse, performance) et humain (satisfaction des utilisateurs internes, fiabilité du processus de recrutement).',
+      results: 'L\'enrichissement du système d\'historisation a offert aux recruteurs une vision complète et précise du parcours de chaque candidat, réduisant les risques d\'oubli ou de perte d\'information. L\'optimisation des workflows a contribué à fluidifier le processus de recrutement, et la résolution des anomalies critiques a amélioré la stabilité et la confiance des utilisateurs envers l\'outil.',
       techStack: ['Java Spring', 'Angular', 'Git', 'CI/CD', 'API Rest'],
       competences: ['java-spring', 'angular', 'git', 'cicd', 'api-rest', 'algorithmique', 'agilite', 'travail-equipe', 'adaptabilite']
     },
     {
       id: 'simulateur-darwinien',
       title: 'Simulateur d\'évolution Darwinienne',
-      shortTitle: 'Simulateur Darwinien',
+      shortTitle: 'DarwinSimulator',
       emoji: '🧬',
       type: 'personnel',
-      period: '2024',
+      period: '2023 – 2024',
       coverGradient: 'linear-gradient(135deg, #7C3AED 0%, #EC4899 100%)',
-      shortDescription: 'Projet personnel de simulation de l\'évolution naturelle par algorithme génétique.',
-      context: '[ À RÉDIGER — La genèse du projet : pourquoi ce sujet, dans quel contexte personnel ou académique. ]',
-      objective: '[ À RÉDIGER — L\'objectif du projet : simuler l\'évolution darwinienne par algorithme, les résultats attendus. ]',
+      shortDescription: 'Simulation interactive de l\'évolution darwinienne en 3D sous Unity, avec des agents autonomes évoluant via un système de réseaux de neurones NEAT.',
+      context: 'DarwinSimulator est un projet étudiant réalisé en équipe de quatre personnes au semestre 6 de ma formation à l\'ESIEA. Passionné par les concepts d\'intelligence artificielle et par la théorie de l\'évolution, nous avons décidé de concevoir une simulation qui mettrait en œuvre ces deux domaines de manière concrète et visuelle, à travers un environnement 3D développé sous Unity.',
+      objective: 'Concevoir une simulation interactive de l\'évolution darwinienne, où des agents autonomes (NPCs) évoluent dans un environnement 3D selon les principes de la sélection naturelle. Les utilisateurs peuvent configurer les paramètres de simulation (taille de carte, nombre de NPCs, densité de ressources) et observer en temps réel l\'émergence de comportements optimisés au fil des générations.',
       actions: [
-        '[ À RÉDIGER — Conception de l\'algorithme d\'évolution. ]',
-        '[ À RÉDIGER — Implémentation et tests de la simulation. ]',
-        '[ À RÉDIGER — Visualisation des résultats. ]'
+        'Développement du module de gestion du terrain et des ressources : génération procédurale de la carte, spawn de nourriture et placement des obstacles.',
+        'Conception d\'une interface utilisateur complète incluant les menus de paramétrage avant simulation et des visualisations dynamiques du réseau neuronal de chaque NPC.',
+        'Intégration d\'un système d\'accélération du temps pour permettre d\'observer plus rapidement les mutations comportementales sur plusieurs générations successives.'
       ],
-      team: '[ À RÉDIGER — Projet solo ou en groupe ? Comment s\'est organisée la collaboration le cas échéant. ]',
-      stakes: '[ À RÉDIGER — Les enjeux de ce projet personnel : apprentissage, challenge technique, visibilité. ]',
-      results: '[ À RÉDIGER — Les résultats obtenus : comportements émergents simulés, complexité algorithmique, apprentissages. ]',
-      techStack: ['Algorithmique', 'Git'],
+      team: 'Projet réalisé en équipe de quatre étudiants à l\'ESIEA. La complexité du projet (3D, IA évolutive, interface) a nécessité une répartition rigoureuse des tâches selon les points forts de chacun. C\'est sur ce projet que j\'ai appris à faire véritablement confiance aux compétences des autres membres, et que j\'ai réalisé qu\'en voulant tout contrôler, je freinais la créativité de l\'équipe.',
+      stakes: 'Ce projet représentait un défi technique important : implémenter un système de réseaux de neurones évolutifs inspiré de NEAT (NeuroEvolution of Augmenting Topologies) dans un moteur 3D, tout en garantissant une simulation fluide et cohérente. L\'enjeu académique était fort, ce projet étant au cœur de nos apprentissages en intelligence artificielle et en développement 3D.',
+      results: 'La simulation produite offre une expérience immersive où les comportements des NPCs évoluent de manière entièrement autonome et non scriptée. On observe l\'émergence progressive de stratégies de survie optimisées sur plusieurs générations, validant le bon fonctionnement du système NEAT implémenté. Le projet a été présenté avec succès dans le cadre de notre formation.',
+      techStack: ['Unity', 'C#', 'NEAT', 'Algorithmique', 'Git'],
       competences: ['algorithmique', 'git', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite']
     },
     {
       id: 'bot-discord',
-      title: 'Gestionnaire de bot Discord',
-      shortTitle: 'Bot Discord',
+      title: 'Gestionnaire de bot Discord — D3',
+      shortTitle: 'Bot Discord D3',
       emoji: '🤖',
       type: 'personnel',
-      period: '2024 – 2025',
+      period: '2023 – 2024',
       coverGradient: 'linear-gradient(135deg, #5865F2 0%, #7C3AED 100%)',
-      shortDescription: 'Développement d\'une interface de gestion complète pour un bot Discord avec Angular.',
-      context: '[ À RÉDIGER — Le contexte du projet : la communauté Discord, les besoins auxquels répondait le bot. ]',
-      objective: '[ À RÉDIGER — L\'objectif du bot et de son interface de gestion : fonctionnalités visées, utilisateurs cibles. ]',
+      shortDescription: 'Passerelle entre un bot Discord et une interface web immersive simulant un environnement de type système d\'exploitation pour administrer un serveur Discord.',
+      context: 'D3 est un projet étudiant réalisé en équipe de quatre personnes au semestre 4 de ma formation à l\'ESIEA. Discord est une plateforme de communication très populaire, utilisée par des millions de communautés en ligne. L\'idée était de repousser les limites de ce qu\'on peut faire avec l\'API Discord, en combinant un bot interactif à une interface web immersive simulant un environnement de type système d\'exploitation.',
+      objective: 'Créer une passerelle innovante entre un bot Discord (développé en Node.js) et une application web baptisée "Windaube XP-TDR", reproduisant l\'apparence d\'un ancien OS. L\'interface permettait aux administrateurs de gérer leur serveur Discord (membres, salons, rôles) via une expérience utilisateur originale, avec notamment un module d\'administration, un système de logs et des outils de personnalisation.',
       actions: [
-        '[ À RÉDIGER — Développement du bot (API Discord). ]',
-        '[ À RÉDIGER — Développement de l\'interface Angular. ]',
-        '[ À RÉDIGER — Mise en place de la CI/CD. ]'
+        'Création et documentation des endpoints REST (Express) exposant les fonctionnalités de gestion du serveur Discord vers le frontend Vue.js.',
+        'Développement et gestion du bot Discord : commandes, modération en temps réel (kick, ban, messagerie, gestion des salons vocaux).',
+        'Structuration du projet avec une architecture modulaire pour faciliter l\'intégration future de nouvelles fonctionnalités Discord dans l\'environnement web.'
       ],
-      team: '[ À RÉDIGER — Les parties prenantes : qui a collaboré sur ce projet et comment. ]',
-      stakes: '[ À RÉDIGER — Les enjeux : fiabilité du bot, expérience utilisateur, maintenabilité du code. ]',
-      results: '[ À RÉDIGER — Les résultats : nombre d\'utilisateurs, fonctionnalités livrées, retours de la communauté. ]',
-      techStack: ['Angular', 'API Rest', 'Git', 'CI/CD', 'Algorithmique'],
-      competences: ['angular', 'api-rest', 'git', 'cicd', 'algorithmique', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite']
+      team: 'Projet mené en équipe de quatre étudiants selon une approche agile, avec une mise en commun régulière des avancements. La séparation claire des responsabilités — bot, API REST et frontend — a permis un développement parallèle efficace tout en maintenant la cohérence globale du système.',
+      stakes: 'L\'enjeu technique principal était d\'assurer une communication fiable et réactive entre l\'interface web et l\'API Discord, avec une architecture suffisamment modulaire pour évoluer facilement. L\'enjeu créatif était de proposer une expérience utilisateur originale et immersive, réellement différente des outils de gestion Discord classiques.',
+      results: 'D3 a abouti à une plateforme fonctionnelle réunissant bot Discord et interface web simulant un OS, permettant une administration complète d\'un serveur Discord depuis un environnement inédit. Le projet a été salué pour son originalité et la qualité de son architecture modulaire, ouvrant de nombreuses possibilités d\'extension futures.',
+      techStack: ['Node.js', 'Vue.js', 'Express', 'API Rest', 'Git'],
+      competences: ['api-rest', 'git', 'algorithmique', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite']
     },
     {
       id: 'jeu-2d-runner',
-      title: 'Jeu 2D Runner',
-      shortTitle: 'Jeu 2D Runner',
+      title: 'Jeu 2D Runner — C2',
+      shortTitle: 'Jeu 2D Runner C2',
       emoji: '🎮',
       type: 'personnel',
-      period: '2023 – 2024',
+      period: '2022 – 2023',
       coverGradient: 'linear-gradient(135deg, #F59E0B 0%, #EF4444 100%)',
-      shortDescription: 'Création d\'un jeu de type runner en 2D avec Java Spring, mêlant logique de jeu et algorithmique.',
-      context: '[ À RÉDIGER — La genèse du projet : pourquoi créer un jeu, quel type de runner, quel public cible. ]',
-      objective: '[ À RÉDIGER — Les objectifs du jeu : gameplay, expérience utilisateur, défi technique. ]',
+      shortDescription: 'Jeu de type runner 2D développé en Java avec JavaFX, intégrant un moteur physique maison et un éditeur de niveaux complet avec export JSON.',
+      context: 'C2 est un projet étudiant réalisé en équipe de quatre personnes au semestre 3 de ma formation à l\'ESIEA. L\'objectif pédagogique était de concevoir un jeu vidéo complet en Java, en maîtrisant les fondamentaux de la programmation orientée objet, de l\'architecture logicielle et des mécaniques de jeu vidéo — sans s\'appuyer sur un moteur de jeu existant.',
+      objective: 'Concevoir un runner 2D en Java avec JavaFX, proposant une expérience de jeu fluide et un éditeur de niveaux permettant aux joueurs de créer et exporter leurs propres cartes. Le jeu devait intégrer un moteur physique maison, un système de score, des effets sonores et une interface utilisateur complète.',
       actions: [
-        '[ À RÉDIGER — Conception du gameplay et des mécaniques de jeu. ]',
-        '[ À RÉDIGER — Implémentation de la logique et des collisions. ]',
-        '[ À RÉDIGER — Développement de l\'interface et des niveaux. ]'
+        'Développement du moteur physique du jeu : gestion de la gravité, des sauts, de la détection de collisions et des animations de mort (effet "ragdoll").',
+        'Conception du système de progression, de score et de la caméra dynamique suivant le joueur.',
+        'Développement de l\'interface utilisateur complète : menus principaux, écran de pause, victoire, et éditeur de niveaux visuel avec support du test immédiat des cartes créées.',
+        'Mise en place d\'un EventBus pour découpler les événements du jeu (pause, mort, collisions) et garantir un gameplay fluide et modulaire.'
       ],
-      team: '[ À RÉDIGER — Projet solo ou collaboratif ? Rôles de chacun le cas échéant. ]',
-      stakes: '[ À RÉDIGER — Les enjeux : challenge technique, plaisir du jeu, apprentissage de la programmation de jeux. ]',
-      results: '[ À RÉDIGER — Les résultats : jouabilité, fonctionnalités livrées, retours des joueurs. ]',
-      techStack: ['Java Spring', 'Algorithmique'],
-      competences: ['java-spring', 'algorithmique', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite']
+      team: 'Projet collaboratif en équipe de quatre étudiants à l\'ESIEA, structuré autour d\'une architecture MVC pour séparer clairement les responsabilités (modèle, vue, contrôleur). Le projet a été présenté lors des TechDays de l\'ESIEA.',
+      stakes: 'L\'enjeu technique était de maîtriser la conception d\'un moteur de jeu 2D from scratch en Java, sans framework dédié, tout en livrant une expérience jouable et agréable. L\'enjeu pédagogique était d\'appliquer concrètement les principes d\'architecture logicielle — MVC, EventBus, gestion des ressources — sur un projet ambitieux et ludique.',
+      results: 'C2 est un jeu runner 2D complet et jouable, avec un gameplay fluide, des effets sonores personnalisés, des animations et un éditeur de niveaux fonctionnel permettant l\'export en JSON. Le projet a été présenté avec succès aux TechDays de l\'ESIEA, illustrant la maîtrise de l\'architecture logicielle et des mécaniques de jeu vidéo en Java.',
+      techStack: ['Java', 'JavaFX', 'Architecture MVC', 'Algorithmique'],
+      competences: ['algorithmique', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite']
     },
     {
       id: 'dessin-vivant',
-      title: 'Évènement "Dessin Vivant"',
+      title: 'Événement "Dessin Vivant"',
       shortTitle: 'Dessin Vivant',
       emoji: '🎨',
       type: 'evenement',
       period: '2023',
       coverGradient: 'linear-gradient(135deg, #F97316 0%, #FACC15 100%)',
-      shortDescription: 'Organisation et animation d\'un événement créatif autour du dessin vivant.',
-      context: '[ À RÉDIGER — Le contexte de l\'événement : qui l\'a initié, dans quel cadre (école, associatif, personnel), pour quel public. ]',
-      objective: '[ À RÉDIGER — L\'objectif de l\'événement : rassembler des participants, créer une expérience artistique, sensibiliser à quoi. ]',
+      shortDescription: 'Organisation d\'un événement culturel autour de l\'animation japonaise à l\'ESIEA : projections d\'animés, buffet asiatique et partenariats étudiants.',
+      context: 'Dessin Vivant est un projet événementiel co-organisé avec un camarade dans le cadre du Projet de Formation Humaine (PFH) du semestre 4 à l\'ESIEA. L\'idée est née de notre envie de proposer quelque chose de différent : un événement culturel autour de l\'animation japonaise, mêlant projections d\'animés sélectionnés par sondage et dégustation de plats asiatiques, dans une atmosphère conviviale et accessible à tous les étudiants.',
+      objective: 'Créer un événement culturel immersif autour de la culture japonaise au sein de l\'école, en transformant cinq salles en espaces de visionnage thématiques et en proposant un buffet japonais et chinois en partenariat avec un fournisseur local. L\'objectif était de réunir 50 participants dans un cadre unique, à mi-chemin entre soirée cinéma et découverte culturelle.',
       actions: [
-        '[ À RÉDIGER — Organisation logistique de l\'événement. ]',
-        '[ À RÉDIGER — Communication et mobilisation des participants. ]',
-        '[ À RÉDIGER — Animation et gestion le jour J. ]'
+        'Analyse du projet par une méthodologie SMART et une étude SWOT, avec plans de gestion des risques (panne matériel, affluence insuffisante, etc.).',
+        'Création de l\'identité visuelle de l\'événement (logo, affiches, flyers) et déploiement d\'une campagne de communication multicanale (Instagram, mails, affichage physique).',
+        'Mise en place de partenariats avec le Club Animé (prêt de comptes streaming) et In\'Con (promotion croisée), et coordination avec Lucky Box pour le buffet à prix abordables.',
+        'Organisation logistique le jour J : répartition des bénévoles, gestion du buffet et suivi des diffusions simultanées sur les cinq salles.'
       ],
-      team: '[ À RÉDIGER — L\'équipe organisatrice : rôles, coordination, parties prenantes. ]',
-      stakes: '[ À RÉDIGER — Les enjeux humains, organisationnels et créatifs de cet événement. ]',
-      results: '[ À RÉDIGER — Les résultats : nombre de participants, retours, impact de l\'événement. ]',
+      team: 'Projet organisé en binôme avec un camarade, avec une répartition naturelle des rôles : je me suis concentré sur la création des visuels et la communication digitale, tandis qu\'il prenait en charge les relations partenaires et la coordination logistique. Cette complémentarité a été un facteur clé du bon déroulement de l\'événement.',
+      stakes: 'Au-delà du défi organisationnel, l\'événement représentait un enjeu humain fort : offrir une expérience culturelle authentique à nos camarades. La gestion des partenariats, du budget et de la logistique en totale autonomie nous a confrontés à des responsabilités réelles de chefs de projet, avec de véritables contraintes à gérer (matériel, fournisseurs, communication).',
+      results: 'L\'événement a réuni 47 participants sur les 50 attendus, validant l\'ensemble de notre stratégie de communication et d\'organisation. Les retours des participants ont été très positifs, soulignant la qualité de l\'ambiance et de l\'organisation. Le projet a été reconnu comme une réussite par notre équipe pédagogique.',
       techStack: [],
       competences: ['travail-equipe', 'adaptabilite', 'creativite']
     }
@@ -396,33 +399,43 @@ export class DataService {
   readonly experiences: Experience[] = [
     {
       id: 'alternance-2024',
-      company: '[ Nom de l\'entreprise ]',
-      role: 'Développeur Full-Stack en alternance',
-      period: 'Sept. 2024 — Juil. 2026',
+      company: 'Aubay',
+      role: 'Développeur Full-Stack - Alternance',
+      period: 'Sept. 2024 - Juil. 2026',
       type: 'alternance',
-      description: '[ À RÉDIGER — Décrire les missions principales, les technologies utilisées et les réalisations marquantes dans cette entreprise. ]',
-      location: '[ Ville ]',
+      description: 'Participation active à la maintenance corrective et évolutive de FabTools, application web interne de gestion du recrutement de stagiaires et alternants. Développement de nouvelles fonctionnalités sur le backend Java Spring et le frontend Angular, résolution d\'anomalies critiques et collaboration étroite avec les équipes RH, campus managers et recruteurs pour faire évoluer l\'outil selon leurs besoins métiers.',
+      location: 'Paris',
       tags: ['Java Spring', 'Angular', 'Git', 'CI/CD', 'Agile']
     },
     {
-      id: 'formation-esiae',
-      company: 'ESIAE',
-      role: 'Étudiant Expert en Ingénierie Logicielle',
-      period: 'Sept. 2024 — Juil. 2026',
+      id: 'formation-esiea',
+      company: 'ESIEA',
+      role: 'Étudiant Mastère Expert Ingénierie de l\'IA et des Applications',
+      period: 'Sept. 2024 - Juil. 2026',
       type: 'formation',
-      description: 'Master Expert en Ingénierie Logicielle en alternance. Formation aux architectures logicielles avancées, aux pratiques DevOps, au développement full-stack et aux méthodes agiles.',
-      location: 'Paris / Distanciel',
-      tags: ['Java Spring', 'Angular', 'Python', 'CI/CD', 'Architecture']
+      description: 'Mastère Expert Bac+5 en Ingénierie de l\'Intelligence Artificielle et des Applications (titre RNCP niveau 7), en 100% alternance et distanciel. Formation aux architectures logicielles avancées, au Machine Learning, au DevOps, à la sécurité et au développement full-stack.',
+      location: 'Distanciel',
+      tags: ['Java Spring', 'Angular', 'Python', 'Machine Learning', 'DevOps', 'Architecture']
     },
     {
-      id: 'experience-anterieure',
-      company: '[ Entreprise précédente ]',
-      role: '[ Rôle ]',
-      period: '[ Période ]',
+      id: 'stage-aubay',
+      company: 'Aubay',
+      role: 'Développeur Full-Stack - Stagiaire',
+      period: 'Févr. 2024 - Juil. 2024',
       type: 'stage',
-      description: '[ À RÉDIGER — Décrire une expérience précédente (stage, alternance en bachelor, etc.). ]',
-      location: '[ Ville ]',
-      tags: ['[ Tag 1 ]', '[ Tag 2 ]']
+      description: 'Stage de 6 mois au sein du pôle DSIE (Direction Systèmes d\'Information Études) d\'Aubay. Travail sur la modernisation des applications internes. Migration Java 11 vers Java 17, maintenance et ajout de fonctionnalités, résolution de vulnérabilités de sécurité détectées par notre pipeline CI/CD.',
+      location: 'Paris',
+      tags: ['Java Spring', 'Microsoft Entra', 'LDAP', 'API REST', 'GitLab CI/CD', 'Sécurité']
+    },
+    {
+      id: 'formation-bachelor',
+      company: 'ESIEA',
+      role: 'Étudiant Concepteur Développeur d\'applications',
+      period: 'Sept. 2021 - Juil. 2024',
+      type: 'formation',
+      description: 'Bachelor Bac+3 en développement logiciel à l\'ESIEA (titre RNCP niveau 6). Formation aux langages de programmation, au développement web et mobile, aux bases de données et aux méthodes agiles.',
+      location: 'Ivry-sur-Seine',
+      tags: ['Java', 'JavaScript', 'C#', 'Unity', 'VueJs', 'SQL', 'Agile']
     }
   ];
 

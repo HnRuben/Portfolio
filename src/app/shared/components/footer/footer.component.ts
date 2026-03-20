@@ -26,7 +26,7 @@ import { RouterLink } from '@angular/router';
         </nav>
 
         <p class="footer__copy">
-          © 2026 Ruben Hayoun · Portfolio Master Expert ESIAE
+          © 2026 Ruben Hayoun · Portfolio Mastère Expert ESIEA
         </p>
       </div>
     </footer>
