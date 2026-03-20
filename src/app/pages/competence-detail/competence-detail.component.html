@@ -1,0 +1,137 @@
+@if (competence(); as c) {
+<div class="comp-detail page-enter">
+
+  <!-- Header band -->
+  <div class="comp-header" [style.background]="c.colorLight">
+    <div class="container">
+      <a routerLink="/competences" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5m0 0 7 7m-7-7 7-7"/></svg>
+        Toutes les compétences
+      </a>
+      <div class="comp-header__inner">
+        <div class="comp-header__icon" [style.color]="c.color" [style.background]="'white'">
+          {{ c.icon }}
+        </div>
+        <div>
+          <div style="display:flex;gap:.5rem;align-items:center;margin-bottom:.6rem;flex-wrap:wrap">
+            <span class="badge" [class.badge--tech]="c.type === 'tech'" [class.badge--human]="c.type === 'human'">
+              {{ c.type === 'tech' ? 'Compétence Technique' : 'Compétence Humaine' }}
+            </span>
+            <span class="badge badge--level">{{ c.level }}</span>
+          </div>
+          <h1 class="comp-header__title">{{ c.title }}</h1>
+          <p class="comp-header__subtitle">{{ c.shortDescription }}</p>
+        </div>
+      </div>
+
+      <!-- Level bar -->
+      <div class="level-bar">
+        @for (lvl of ['Initié','Autonome','Confirmé','Expert']; track lvl; let i = $index) {
+          <div class="level-bar__step" [class.active]="i <= getLevelIndex(c.level)" [style.--step-color]="c.color">
+            <span class="level-bar__dot"></span>
+            <span class="level-bar__label">{{ lvl }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <section class="section section--sm">
+    <div class="container">
+      <div class="comp-content-grid">
+
+        <!-- Main article -->
+        <article class="comp-article">
+
+          <div class="comp-block" appReveal>
+            <h2 class="comp-block__title">Ma définition</h2>
+            <div class="comp-block__body">
+              <p>{{ c.definition }}</p>
+              @if (c.context) {
+                <p>{{ c.context }}</p>
+              }
+            </div>
+          </div>
+
+          <div class="comp-block" appReveal>
+            <h2 class="comp-block__title">Mes éléments de preuve</h2>
+            <div class="anecdotes">
+              @for (a of c.anecdotes; track a.title; let i = $index) {
+                <div class="anecdote" appReveal [revealDelay]="i * 100">
+                  <div class="anecdote__number">{{ i + 1 }}</div>
+                  <div class="anecdote__content">
+                    <h3 class="anecdote__title">{{ a.title }}</h3>
+                    <p class="anecdote__text">{{ a.content }}</p>
+                    @if (a.result) {
+                      <div class="anecdote__result">
+                        <span class="label" style="color:var(--color-tech)">✅ Résultat</span>
+                        <p>{{ a.result }}</p>
+                      </div>
+                    }
+                    @if (a.realisationId) {
+                      <a [routerLink]="['/realisations', a.realisationId]" class="anecdote__link">
+                        Voir la réalisation associée →
+                      </a>
+                    }
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="comp-sidebar">
+
+          <!-- Related realisations -->
+          <div class="sidebar-card" appReveal>
+            <h3 class="sidebar-card__title">Réalisations liées</h3>
+            @if (relatedRealisations().length > 0) {
+              <div class="sidebar-reals">
+                @for (r of relatedRealisations(); track r.id) {
+                  <a [routerLink]="['/realisations', r.id]" class="sidebar-real">
+                    <span class="sidebar-real__emoji">{{ r.emoji }}</span>
+                    <div>
+                      <p class="sidebar-real__name">{{ r.shortTitle }}</p>
+                      <p class="sidebar-real__period body-sm" style="color:var(--color-text-muted)">{{ r.period }}</p>
+                    </div>
+                  </a>
+                }
+              </div>
+            } @else {
+              <p class="body-sm" style="color:var(--color-text-muted)">Aucune réalisation liée.</p>
+            }
+          </div>
+
+          <!-- Other competences -->
+          <div class="sidebar-card" appReveal [revealDelay]="100">
+            <h3 class="sidebar-card__title">Autres compétences</h3>
+            <div class="other-comps">
+              @for (oc of allCompetences; track oc.id) {
+                @if (oc.id !== c.id) {
+                  <a [routerLink]="['/competences', oc.id]" class="other-comp"
+                     [style.--oc-color]="oc.color" [style.--oc-bg]="oc.colorLight">
+                    <span>{{ oc.icon }}</span>
+                    <span>{{ oc.title }}</span>
+                  </a>
+                }
+              }
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</div>
+} @else {
+  <div class="container section">
+    <p>Compétence introuvable.</p>
+    <a routerLink="/competences" class="btn btn--outline" style="margin-top:1rem">
+      ← Retour aux compétences
+    </a>
+  </div>
+}

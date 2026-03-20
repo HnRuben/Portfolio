@@ -1,0 +1,69 @@
+<div class="realisations page-enter">
+
+  <!-- Header -->
+  <section class="section section--sm page-header">
+    <div class="container">
+      <span class="section-label" appReveal>Ce que j'ai construit</span>
+      <h1 class="section-title display-lg" appReveal [revealDelay]="80">Mes réalisations</h1>
+      <p class="section-subtitle" appReveal [revealDelay]="160">
+        5 projets qui reflètent mon parcours, de l'application web en entreprise
+        aux créations personnelles et événementielles.
+      </p>
+
+      <div class="filter-tabs" appReveal [revealDelay]="220">
+        @for (f of filters; track f.id) {
+          <button class="filter-tab" [class.active]="activeFilter() === f.id" (click)="activeFilter.set(f.id)">
+            {{ f.label }}
+          </button>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid -->
+  <section class="section section--sm">
+    <div class="container">
+      <div class="real-grid">
+        @for (r of filteredRealisations; track r.id; let i = $index) {
+          <a [routerLink]="['/realisations', r.id]" class="real-card card" appReveal [revealDelay]="i * 80">
+
+            <!-- Cover -->
+            <div class="real-card__cover" [style.background]="r.coverGradient">
+              <span class="real-card__emoji">{{ r.emoji }}</span>
+              <div class="real-card__cover-overlay"></div>
+              <span class="real-card__type">
+                @switch (r.type) {
+                  @case ('entreprise') { 🏢 Entreprise }
+                  @case ('personnel')  { 💻 Personnel }
+                  @case ('evenement')  { 🎉 Événement }
+                }
+              </span>
+            </div>
+
+            <!-- Body -->
+            <div class="real-card__body">
+              <div class="real-card__meta">
+                <span class="label" style="color:var(--color-text-muted)">{{ r.period }}</span>
+              </div>
+              <h2 class="real-card__title">{{ r.shortTitle }}</h2>
+              <p class="real-card__desc">{{ r.shortDescription }}</p>
+
+              @if (r.techStack.length > 0) {
+                <div class="real-card__stack">
+                  @for (t of r.techStack; track t) {
+                    <span class="tag">{{ t }}</span>
+                  }
+                </div>
+              }
+
+              <div class="real-card__footer">
+                <span class="real-card__cta">Voir le détail →</span>
+              </div>
+            </div>
+          </a>
+        }
+      </div>
+    </div>
+  </section>
+
+</div>

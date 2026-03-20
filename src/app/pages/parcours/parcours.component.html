@@ -1,0 +1,72 @@
+<div class="parcours page-enter">
+
+  <section class="section section--sm page-header">
+    <div class="container">
+      <span class="section-label" appReveal>Mon histoire</span>
+      <h1 class="section-title display-lg" appReveal [revealDelay]="80">Mon parcours</h1>
+      <p class="section-subtitle" appReveal [revealDelay]="160">
+        Mon évolution professionnelle et académique, de mes premières expériences
+        jusqu'au Master Expert en Ingénierie Logicielle.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--sm">
+    <div class="container">
+      <div class="timeline">
+        @for (exp of experiences; track exp.id; let i = $index) {
+          <div class="timeline-item" appReveal [revealDelay]="i * 100">
+            <div class="timeline-item__connector">
+              <div class="timeline-item__dot" [class]="'timeline-item__dot--' + exp.type"></div>
+              @if (i < experiences.length - 1) {
+                <div class="timeline-item__line"></div>
+              }
+            </div>
+            <div class="timeline-item__card card">
+              <div class="timeline-item__header">
+                <div>
+                  <div class="timeline-item__type-badge badge"
+                       [class.badge--accent]="exp.type === 'alternance'"
+                       [class.badge--tech]="exp.type === 'stage' || exp.type === 'formation'">
+                    @switch (exp.type) {
+                      @case ('alternance') { 🎓 Alternance }
+                      @case ('stage')      { 💼 Stage }
+                      @case ('formation')  { 📚 Formation }
+                      @case ('projet')     { 🚀 Projet }
+                    }
+                  </div>
+                  <h3 class="timeline-item__role">{{ exp.role }}</h3>
+                  <p class="timeline-item__company">{{ exp.company }}</p>
+                </div>
+                <div class="timeline-item__period">
+                  <span class="label" style="color:var(--color-text-muted)">{{ exp.period }}</span>
+                  <span class="timeline-item__location">📍 {{ exp.location }}</span>
+                </div>
+              </div>
+              <p class="timeline-item__desc">{{ exp.description }}</p>
+              @if (exp.tags.length > 0) {
+                <div class="timeline-item__tags">
+                  @for (t of exp.tags; track t) {
+                    <span class="tag">{{ t }}</span>
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Download CV -->
+      <div class="cv-cta" appReveal>
+        <div class="cv-cta__inner">
+          <div>
+            <h3 class="cv-cta__title">Vous souhaitez en savoir plus ?</h3>
+            <p class="cv-cta__sub">Retrouvez l'ensemble de mon parcours sur LinkedIn ou contactez-moi directement.</p>
+          </div>
+          <a routerLink="/contact" class="btn btn--primary">Me contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

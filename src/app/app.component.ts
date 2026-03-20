@@ -1,0 +1,29 @@
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, NavbarComponent, FooterComponent],
+  template: `
+    <app-navbar />
+    <main class="app-main">
+      <router-outlet />
+    </main>
+    <app-footer />
+  `,
+  styles: [`
+    :host {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .app-main {
+      flex: 1;
+      padding-top: 80px;
+    }
+  `]
+})
+export class AppComponent {}

@@ -1,0 +1,208 @@
+.real-hero {
+  padding: 3rem 0 2.5rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.15);
+    pointer-events: none;
+  }
+
+  .container { position: relative; z-index: 1; }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  &__emoji {
+    font-size: 5rem;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,.2));
+    flex-shrink: 0;
+    animation: heroEmoji 4s ease-in-out infinite;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: .75rem;
+  }
+
+  &__period {
+    font-size: .8rem;
+    font-weight: 600;
+    opacity: .8;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 700;
+    letter-spacing: -.03em;
+    margin-bottom: .6rem;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,.2);
+  }
+
+  &__desc {
+    font-size: 1.0625rem;
+    opacity: .9;
+    max-width: 60ch;
+    line-height: 1.6;
+  }
+}
+
+// Content grid
+.real-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2.5rem;
+  align-items: start;
+
+  @media (max-width: 900px) { grid-template-columns: 1fr; }
+}
+
+// Article
+.real-article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.real-block {
+  &__title {
+    font-family: var(--font-display);
+    font-size: 1.1875rem;
+    font-weight: 600;
+    letter-spacing: -.02em;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 1.15em;
+      background: var(--color-accent);
+      border-radius: 2px;
+    }
+  }
+
+  p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+
+  &--highlight {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, #F5F3FF 100%);
+    border: 1.5px solid rgba(79,70,229,.15);
+    border-radius: var(--radius-lg);
+
+    .real-block__title::before { background: var(--color-accent); }
+    p { color: var(--color-text); font-weight: 500; }
+  }
+}
+
+// Actions list
+.real-actions {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    flex-shrink: 0;
+    margin-top: .5rem;
+  }
+
+  p { color: var(--color-text-muted); line-height: 1.7; }
+}
+
+// Sidebar
+.real-sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  @media (max-width: 900px) { position: static; }
+}
+
+.sidebar-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+
+  &__title {
+    font-family: var(--font-display);
+    font-size: .9375rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.comp-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  &__link {
+    font-size: .875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    padding: .4rem .6rem;
+    border-radius: var(--radius-sm);
+    transition: background .2s;
+
+    &:hover { background: var(--color-accent-light); }
+  }
+}
+
+@keyframes heroEmoji {
+  0%, 100% { transform: rotate(-3deg) scale(1); }
+  50%       { transform: rotate(3deg) scale(1.05); }
+}

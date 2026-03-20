@@ -1,0 +1,136 @@
+<div class="about page-enter">
+
+  <!-- Page header -->
+  <section class="section section--sm page-header">
+    <div class="container">
+      <span class="section-label" appReveal>Qui suis-je ?</span>
+      <h1 class="section-title display-lg" appReveal [revealDelay]="80">
+        À propos de moi
+      </h1>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="section section--sm">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Photo & stats -->
+        <aside class="about-aside" appReveal>
+          <div class="about-photo">
+            <div class="about-photo__placeholder">
+              <span>RH</span>
+            </div>
+            <div class="about-photo__decoration"></div>
+          </div>
+          <div class="about-quick">
+            <div class="about-quick__item">
+              <span class="label" style="color:var(--color-accent)">Statut</span>
+              <span>Alternant · Expert IL</span>
+            </div>
+            <div class="about-quick__item">
+              <span class="label" style="color:var(--color-accent)">Localisation</span>
+              <span>📍Ivry sur Seine</span>
+            </div>
+            <div class="about-quick__item">
+              <span class="label" style="color:var(--color-accent)">Disponibilité</span>
+              <span>🎓Diplôme prévu juillet 2026</span>
+            </div>
+            <div class="about-quick__item">
+              <span class="label" style="color:var(--color-accent)">Contact</span>
+              <a routerLink="/contact" style="color:var(--color-accent);font-weight:600">Me contacter →</a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Bio text -->
+        <div class="about-content">
+
+          <div class="about-section" appReveal>
+            <h2 class="about-section__title">Mon projet professionnel</h2>
+            <p>
+              [ À RÉDIGER — Décrivez votre projet professionnel : vers quel métier vous tendez,
+              quelles technologies ou domaines vous passionnent le plus, et où vous vous voyez
+              dans 2 à 5 ans. Ce paragraphe doit montrer votre vision et votre ambition. ]
+            </p>
+            <p>
+              [ À RÉDIGER — Vous pouvez ajouter un deuxième paragraphe pour préciser
+              vos objectifs à court terme, vos aspirations techniques ou de leadership. ]
+            </p>
+          </div>
+
+          <div class="about-section" appReveal>
+            <h2 class="about-section__title">Mes valeurs</h2>
+            <p>
+              [ À RÉDIGER — Décrivez les valeurs qui guident votre façon de travailler
+              et de vous comporter en équipe. Qu'est-ce qui vous différencie ? ]
+            </p>
+            <div class="values-grid">
+              @for (v of values; track v.label) {
+                <div class="value-card">
+                  <span class="value-card__icon">{{ v.icon }}</span>
+                  <h3 class="value-card__label">{{ v.label }}</h3>
+                  <p class="value-card__desc">{{ v.desc }}</p>
+                </div>
+              }
+            </div>
+          </div>
+
+          <div class="about-section" appReveal>
+            <h2 class="about-section__title">Mes qualités humaines principales</h2>
+            <p>
+              [ À RÉDIGER — Décrivez 3 à 4 qualités humaines qui vous définissent
+              particulièrement, avec des exemples concrets issus de votre parcours. ]
+            </p>
+          </div>
+
+          <div class="about-section" appReveal>
+            <h2 class="about-section__title">Mes centres d'intérêt</h2>
+            <p>
+              [ À RÉDIGER — Parlez de vos centres d'intérêt en lien ou non avec le développement.
+              Montrez votre personnalité et ce qui vous nourrit intellectuellement et humainement. ]
+            </p>
+            <div class="interests">
+              @for (i of interests; track i) {
+                <span class="tag">{{ i }}</span>
+              }
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation circulaire -->
+  <section class="section--sm circular-nav">
+    <div class="container">
+      <div class="circular-nav__inner" appReveal>
+        <h2 class="circular-nav__title">Explorer mon portfolio</h2>
+        <div class="circular-nav__links">
+          <a routerLink="/competences" class="circular-nav__link">
+            <span>🧠</span>
+            <strong>Compétences</strong>
+            <span class="label">10 compétences</span>
+          </a>
+          <a routerLink="/realisations" class="circular-nav__link">
+            <span>🚀</span>
+            <strong>Réalisations</strong>
+            <span class="label">5 projets</span>
+          </a>
+          <a routerLink="/parcours" class="circular-nav__link">
+            <span>🗺️</span>
+            <strong>Parcours</strong>
+            <span class="label">Mon histoire</span>
+          </a>
+          <a routerLink="/contact" class="circular-nav__link">
+            <span>✉️</span>
+            <strong>Contact</strong>
+            <span class="label">Me joindre</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

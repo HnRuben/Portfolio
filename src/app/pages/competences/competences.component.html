@@ -1,0 +1,91 @@
+<div class="competences page-enter">
+
+  <!-- Header -->
+  <section class="section section--sm page-header">
+    <div class="container">
+      <span class="section-label" appReveal>Mon expertise</span>
+      <h1 class="section-title display-lg" appReveal [revealDelay]="80">Mes compétences</h1>
+      <p class="section-subtitle" appReveal [revealDelay]="160">
+        6 compétences techniques et 4 compétences humaines développées sur deux ans
+        d'alternance et de projets personnels.
+      </p>
+
+      <!-- Filter tabs -->
+      <div class="filter-tabs" appReveal [revealDelay]="220">
+        <button class="filter-tab" [class.active]="activeFilter() === 'all'"   (click)="setFilter('all')">Toutes (10)</button>
+        <button class="filter-tab" [class.active]="activeFilter() === 'tech'"  (click)="setFilter('tech')">Techniques (6)</button>
+        <button class="filter-tab" [class.active]="activeFilter() === 'human'" (click)="setFilter('human')">Humaines (4)</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Matrix view -->
+  <section class="section section--sm">
+    <div class="container">
+
+      <!-- Tech section -->
+      @if (activeFilter() !== 'human') {
+        <div class="comp-section">
+          <div class="comp-section__header" appReveal>
+            <span class="badge badge--tech">Compétences Techniques</span>
+            <span class="comp-section__count">{{ techCompetences.length }} compétences</span>
+          </div>
+
+          <div class="comp-cards-grid">
+            @for (c of filteredTech; track c.id; let i = $index) {
+              <a [routerLink]="['/competences', c.id]" class="comp-card card" appReveal [revealDelay]="i * 70">
+                <div class="comp-card__header" [style.background]="c.colorLight">
+                  <span class="comp-card__icon" [style.color]="c.color">{{ c.icon }}</span>
+                  <span class="badge badge--tech">Technique</span>
+                </div>
+                <div class="comp-card__body">
+                  <h3 class="comp-card__title">{{ c.title }}</h3>
+                  <p class="comp-card__desc body-sm">{{ c.shortDescription }}</p>
+                  <div class="comp-card__footer">
+                    <span class="badge badge--level">{{ c.level }}</span>
+                    <span class="comp-card__reals label">
+                      {{ getRealisationsForCompetence(c.id) }} réalisation(s)
+                    </span>
+                  </div>
+                </div>
+              </a>
+            }
+          </div>
+        </div>
+      }
+
+      <!-- Human section -->
+      @if (activeFilter() !== 'tech') {
+        <div class="comp-section">
+          <div class="comp-section__header" appReveal>
+            <span class="badge badge--human">Compétences Humaines</span>
+            <span class="comp-section__count">{{ humanCompetences.length }} compétences</span>
+          </div>
+
+          <div class="comp-cards-grid">
+            @for (c of filteredHuman; track c.id; let i = $index) {
+              <a [routerLink]="['/competences', c.id]" class="comp-card card" appReveal [revealDelay]="i * 70">
+                <div class="comp-card__header" [style.background]="c.colorLight">
+                  <span class="comp-card__icon" [style.color]="c.color">{{ c.icon }}</span>
+                  <span class="badge badge--human">Humaine</span>
+                </div>
+                <div class="comp-card__body">
+                  <h3 class="comp-card__title">{{ c.title }}</h3>
+                  <p class="comp-card__desc body-sm">{{ c.shortDescription }}</p>
+                  <div class="comp-card__footer">
+                    <span class="badge badge--level">{{ c.level }}</span>
+                    <span class="comp-card__reals label">
+                      {{ getRealisationsForCompetence(c.id) }} réalisation(s)
+                    </span>
+                  </div>
+                </div>
+              </a>
+            }
+          </div>
+        </div>
+      }
+
+    </div>
+  </section>
+
+</div>

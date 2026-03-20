@@ -1,0 +1,51 @@
+<nav class="navbar" [class.navbar--scrolled]="scrolled()">
+  <div class="container navbar__inner">
+
+    <!-- Logo / Name -->
+    <a routerLink="/" class="navbar__logo">
+      <span class="navbar__logo-initials">RH</span>
+      <span class="navbar__logo-name">Ruben Hayoun</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="navbar__links">
+      @for (link of navLinks; track link.path) {
+        <li>
+          <a
+            [routerLink]="link.path"
+            routerLinkActive="active"
+            class="navbar__link"
+          >{{ link.label }}</a>
+        </li>
+      }
+    </ul>
+
+    <!-- CTA -->
+    <a routerLink="/contact" class="navbar__cta btn btn--primary hide-mobile">
+      Me contacter
+    </a>
+
+    <!-- Burger -->
+    <button class="navbar__burger" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()">
+      <span class="navbar__burger-line" [class.open]="menuOpen()"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="navbar__mobile" [class.navbar__mobile--open]="menuOpen()">
+    <ul class="navbar__mobile-links">
+      @for (link of navLinks; track link.path) {
+        <li>
+          <a [routerLink]="link.path" routerLinkActive="active" class="navbar__mobile-link">
+            {{ link.label }}
+          </a>
+        </li>
+      }
+      <li>
+        <a routerLink="/contact" class="btn btn--primary" style="width:100%;justify-content:center;">
+          Me contacter
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,111 @@
+<div class="contact page-enter">
+
+  <!-- Header -->
+  <section class="section section--sm page-header">
+    <div class="container">
+      <span class="section-label" appReveal>Restons en contact</span>
+      <h1 class="section-title display-lg" appReveal [revealDelay]="80">Me contacter</h1>
+      <p class="section-subtitle" appReveal [revealDelay]="160">
+        Vous avez un projet, une opportunité ou une question ?
+        N'hésitez pas à me joindre.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--sm">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Left — contact cards -->
+        <div class="contact-cards">
+
+          @for (link of contactLinks; track link.label; let i = $index) {
+            <a
+              [href]="link.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card card"
+              appReveal
+              [revealDelay]="i * 100"
+              [style.--card-color]="link.color"
+              [style.--card-bg]="link.colorLight"
+            >
+              <div class="contact-card__icon">{{ link.icon }}</div>
+              <div class="contact-card__info">
+                <span class="contact-card__label label">{{ link.label }}</span>
+                <span class="contact-card__value">{{ link.value }}</span>
+              </div>
+              <svg class="contact-card__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7m0 0H7m10 0v10"/>
+              </svg>
+            </a>
+          }
+
+          <!-- Email copy button -->
+          <div class="email-copy" appReveal [revealDelay]="300">
+            <span class="email-copy__addr">{{ email }}</span>
+            <button class="email-copy__btn btn btn--outline" (click)="copyEmail()">
+              @if (copied()) {
+                ✅ Copié !
+              } @else {
+                📋 Copier l'email
+              }
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right — info panel -->
+        <div class="contact-info" appReveal [revealDelay]="200">
+
+          <div class="contact-info__block">
+            <h2 class="contact-info__title">Disponibilité</h2>
+            <div class="availability-badge">
+              <span class="availability-badge__dot"></span>
+              <span>Disponible à partir de <strong>juillet 2026</strong></span>
+            </div>
+            <p class="contact-info__text">
+              Actuellement en alternance jusqu'en juillet 2026, je suis ouvert
+              aux discussions pour des opportunités post-diplôme.
+            </p>
+          </div>
+
+          <div class="contact-info__block">
+            <h2 class="contact-info__title">Ce que je recherche</h2>
+            <div class="looking-for">
+              <div class="looking-for__item">
+                <span>🚀</span>
+                <span>Développement Full-Stack (Java / Angular)</span>
+              </div>
+              <div class="looking-for__item">
+                <span>🏗️</span>
+                <span>Architecture logicielle & DevOps</span>
+              </div>
+              <div class="looking-for__item">
+                <span>🤝</span>
+                <span>Environnement collaboratif et stimulant</span>
+              </div>
+              <div class="looking-for__item">
+                <span>📍</span>
+                <span>[ Ville ] · Remote possible</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info__block">
+            <h2 class="contact-info__title">Navigation</h2>
+            <div class="contact-nav">
+              <a routerLink="/a-propos" class="contact-nav__link">→ En savoir plus sur moi</a>
+              <a routerLink="/realisations" class="contact-nav__link">→ Voir mes réalisations</a>
+              <a routerLink="/competences" class="contact-nav__link">→ Mes compétences</a>
+              <a routerLink="/parcours" class="contact-nav__link">→ Mon parcours</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
