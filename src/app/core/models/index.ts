@@ -48,4 +48,7 @@ export interface Experience {
   description: string;
   location: string;
   tags: string[];
+  details?: string;
+  relatedRealisations?: string[];
+  relatedCompetences?: string[];
 }

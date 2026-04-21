@@ -1,0 +1,79 @@
+<div class="modal-overlay" (click)="close()">
+  <div class="modal" role="dialog" aria-modal="true" (click)="$event.stopPropagation()">
+
+    <button class="modal__close" (click)="close()" aria-label="Fermer">✕</button>
+
+    <div class="modal__header">
+      <div class="modal__badge badge"
+           [class.badge--accent]="experience().type === 'alternance'"
+           [class.badge--tech]="experience().type === 'stage' || experience().type === 'formation'">
+        @switch (experience().type) {
+          @case ('alternance') { 🎓 Alternance }
+          @case ('stage')      { 💼 Stage }
+          @case ('formation')  { 📚 Formation }
+          @case ('projet')     { 🚀 Projet }
+        }
+      </div>
+      <h2 class="modal__role">{{ experience().role }}</h2>
+      <p class="modal__company">{{ experience().company }}</p>
+      <div class="modal__meta">
+        <span class="label">{{ experience().period }}</span>
+        <span class="modal__location">📍 {{ experience().location }}</span>
+      </div>
+    </div>
+
+    <div class="modal__body">
+
+      <section class="modal__section">
+        <h4 class="modal__section-title">
+          @if (experience().type === 'formation') { Contenu de la formation }
+          @else { Missions & responsabilités }
+        </h4>
+        <p class="modal__text">{{ experience().description }}</p>
+      </section>
+
+      @if (experience().details) {
+        <section class="modal__section">
+          <h4 class="modal__section-title">
+            @if (experience().type === 'formation') { L'établissement }
+            @else { L'entreprise }
+          </h4>
+          <p class="modal__text">{{ experience().details }}</p>
+        </section>
+      }
+
+      @if (experience().relatedRealisations && experience().relatedRealisations!.length > 0) {
+        <section class="modal__section">
+          <h4 class="modal__section-title">Réalisations rattachées</h4>
+          <div class="modal__links">
+            @for (id of experience().relatedRealisations; track id) {
+              @if (getRealisationById(id); as r) {
+                <a [routerLink]="['/realisations', id]" (click)="close()" class="modal__link-card">
+                  <span class="modal__link-emoji">{{ r.emoji }}</span>
+                  <span class="modal__link-label">{{ r.shortTitle }}</span>
+                  <span class="modal__link-arrow">→</span>
+                </a>
+              }
+            }
+          </div>
+        </section>
+      }
+
+      @if (experience().relatedCompetences && experience().relatedCompetences!.length > 0) {
+        <section class="modal__section">
+          <h4 class="modal__section-title">Compétences rattachées</h4>
+          <div class="modal__competences">
+            @for (id of experience().relatedCompetences; track id) {
+              @if (getCompetenceById(id); as c) {
+                <a [routerLink]="['/competences', id]" (click)="close()" class="modal__competence-tag">
+                  {{ c.icon }} {{ c.title }}
+                </a>
+              }
+            }
+          </div>
+        </section>
+      }
+
+    </div>
+  </div>
+</div>

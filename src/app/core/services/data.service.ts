@@ -393,7 +393,10 @@ export class DataService {
       type: 'alternance',
       description: `Participation active à la maintenance corrective et évolutive de FabTools, application web interne de gestion du recrutement de stagiaires et alternants. Développement de nouvelles fonctionnalités sur le backend Java Spring et le frontend Angular, résolution d'anomalies critiques et collaboration étroite avec les équipes RH, campus managers et recruteurs pour faire évoluer l'outil selon leurs besoins métiers.`,
       location: 'Paris',
-      tags: ['Java Spring', 'Angular', 'Git', 'CI/CD', 'Agile']
+      tags: ['Java Spring', 'Angular', 'Git', 'CI/CD', 'Agile'],
+      details: `La CodeFactory d'Aubay est une structure dédiée à la montée en compétences des alternants et stagiaires sur des projets web réels pour des clients internes. J'y travaille au sein d'une équipe agile sur des applications métier complexes avec des exigences proches de celles d'un environnement de production : revues de code croisées, pipeline CI/CD Jenkins/SonarQube, respect des bonnes pratiques et livraisons régulières. Cette immersion professionnelle m'a permis de développer une vraie maîtrise des environnements de développement modernes.`,
+      relatedRealisations: ['m-a-web'],
+      relatedCompetences: ['java-spring', 'angular', 'git', 'cicd', 'api-rest', 'algorithmique', 'agilite', 'adaptabilite']
     },
     {
       id: 'formation-esiea',
@@ -403,7 +406,10 @@ export class DataService {
       type: 'formation',
       description: `Mastère Expert Bac+5 en Ingénierie de l'Intelligence Artificielle et des Applications (titre RNCP niveau 7), en 100% alternance et distanciel. Formation aux architectures logicielles avancées, au Machine Learning, au DevOps, à la sécurité et au développement full-stack.`,
       location: 'Distanciel',
-      tags: ['Java Spring', 'Angular', 'Python', 'Machine Learning', 'DevOps', 'Architecture']
+      tags: ['Java Spring', 'Angular', 'Python', 'Machine Learning', 'DevOps', 'Architecture'],
+      details: `L'ESIEA est une école d'ingénieurs reconnue dont la pédagogie s'appuie sur des projets pratiques en groupe et sur l'alternance en entreprise. Ce Mastère Expert 100% distanciel m'a appris à m'organiser de manière autonome tout en progressant sur des sujets avancés : intelligence artificielle, architectures distribuées, DevOps et sécurité. Le format alternance permet une mise en pratique immédiate des concepts abordés en cours, dans un contexte professionnel réel.`,
+      relatedRealisations: [],
+      relatedCompetences: []
     },
     {
       id: 'stage-aubay',
@@ -413,7 +419,10 @@ export class DataService {
       type: 'stage',
       description: `Stage de 6 mois au sein du pôle DSIE (Direction Systèmes d'Information Études) d'Aubay. Travail sur la modernisation des applications internes. Migration Java 11 vers Java 17, maintenance et ajout de fonctionnalités, résolution de vulnérabilités de sécurité détectées par notre pipeline CI/CD.`,
       location: 'Paris',
-      tags: ['Java Spring', 'Microsoft Entra', 'LDAP', 'API REST', 'GitLab CI/CD', 'Sécurité']
+      tags: ['Java Spring', 'Microsoft Entra', 'LDAP', 'API REST', 'GitLab CI/CD', 'Sécurité'],
+      details: `Aubay est une entreprise de services numériques (ESN) spécialisée dans l'accompagnement de grandes entreprises dans leur transformation digitale. La DSIE (Direction Systèmes d'Information Études) est le pôle interne en charge des outils informatiques de l'entreprise. Ce stage m'a permis de découvrir le monde professionnel dans un contexte de code legacy avec de vraies contraintes de compatibilité, de sécurité et de performance, très différentes des projets académiques.`,
+      relatedRealisations: ['m-a-web'],
+      relatedCompetences: ['java-spring', 'git', 'cicd', 'api-rest', 'adaptabilite']
     },
     {
       id: 'formation-bachelor',
@@ -423,7 +432,10 @@ export class DataService {
       type: 'formation',
       description: `Bachelor Bac+3 en développement logiciel à l'ESIEA (titre RNCP niveau 6). Formation aux langages de programmation, au développement web et mobile, aux bases de données et aux méthodes agiles.`,
       location: 'Ivry-sur-Seine',
-      tags: ['Java', 'JavaScript', 'C#', 'Unity', 'VueJs', 'SQL', 'Agile']
+      tags: ['Java', 'JavaScript', 'C#', 'Unity', 'VueJs', 'SQL', 'Agile'],
+      details: `L'ESIEA propose un Bachelor en développement logiciel centré sur la pratique par projets. Chaque semestre est rythmé par un projet de groupe ambitieux, confrontant les étudiants à des problématiques concrètes de développement et les formant à travailler en équipe dans un cadre agile. Cette approche pédagogique par le concret m'a donné de solides bases techniques et humaines avant d'entrer dans le monde professionnel.`,
+      relatedRealisations: ['simulateur-darwinien', 'bot-discord', 'jeu-2d-runner', 'dessin-vivant'],
+      relatedCompetences: ['algorithmique', 'git', 'agilite', 'adaptabilite', 'creativite']
     }
   ];
 

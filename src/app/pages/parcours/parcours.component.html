@@ -22,7 +22,7 @@
                 <div class="timeline-item__line"></div>
               }
             </div>
-            <div class="timeline-item__card card">
+            <div class="timeline-item__card card timeline-item__card--clickable" (click)="openModal(exp)">
               <div class="timeline-item__header">
                 <div>
                   <div class="timeline-item__type-badge badge"
@@ -43,7 +43,6 @@
                   <span class="timeline-item__location">📍 {{ exp.location }}</span>
                 </div>
               </div>
-              <p class="timeline-item__desc">{{ exp.description }}</p>
               @if (exp.tags.length > 0) {
                 <div class="timeline-item__tags">
                   @for (t of exp.tags; track t) {
@@ -51,6 +50,10 @@
                   }
                 </div>
               }
+              <div class="timeline-item__cta">
+                <span>Voir les détails</span>
+                <span class="timeline-item__cta-arrow">→</span>
+              </div>
             </div>
           </div>
         }
@@ -70,3 +73,10 @@
   </section>
 
 </div>
+
+@if (selectedExperience()) {
+  <app-experience-modal
+    [experience]="selectedExperience()!"
+    (closed)="closeModal()"
+  />
+}
