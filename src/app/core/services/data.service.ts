@@ -266,6 +266,35 @@ export class DataService {
       ],
       relatedRealisations: ['simulateur-darwinien', 'bot-discord', 'jeu-2d-runner', 'dessin-vivant']
     },
+
+    // ── TRAVAIL EN ÉQUIPE ─────────────────────────────────────────────────
+    {
+      id: 'travail-equipe',
+      title: 'Travail en équipe',
+      type: 'human',
+      level: 'Confirmé',
+      icon: '🤝',
+      color: '#0284C7',
+      colorLight: '#E0F2FE',
+      shortDescription: `Capacité à collaborer efficacement au sein d'équipes, à contribuer à une dynamique collective et à maintenir une communication claire avec tous les interlocuteurs.`,
+      definition: `Pour moi, travailler en équipe ce n'est pas juste se répartir des tickets et avancer chacun dans son coin. C'est construire quelque chose ensemble de manière cohérente, et ça implique de vraies habitudes de collaboration au quotidien : partager ce qu'on sait, relire le travail des autres avec bienveillance, poser des questions quand on bloque plutôt que de rester seul dessus pendant des heures. Dans un contexte professionnel, ça implique aussi de savoir communiquer avec des gens qui n'ont pas le même langage que soi, que ce soit un PO, un RH ou un client, et c'est souvent là que les vrais défis d'équipe se cachent, pas dans le code.`,
+      context: `J'ai pratiqué le travail en équipe de manière intensive depuis mes premiers projets à l'ESIEA, toujours en groupes de quatre. En alternance à la CodeFactory, les équipes étaient plus grandes, entre 5 et 10 développeurs selon les périodes, avec un turnover régulier d'alternants et de stagiaires. Ce qui était particulier dans ce contexte, c'est qu'on avait à disposition des experts avec beaucoup plus d'expérience que nous, disponibles au quotidien pour nous accompagner. Ça m'a appris à ne pas hésiter à demander de l'aide et à profiter de cette proximité avec des profils seniors pour progresser vite. Sur tous ces projets, les rituels agiles structuraient notre collaboration, et les contrôles croisés sur les Merge Requests étaient le moment où le travail d'équipe était le plus concret et le plus formateur.`,
+      anecdotes: [
+        {
+          title: `Friction PO / développeurs sur la définition des tickets`,
+          content: `Sur FabTools, l'une des difficultés récurrentes dans notre équipe n'était pas technique, c'était la communication avec notre PO. Ses tickets manquaient souvent de précision : les critères d'acceptance étaient flous, des cas limites n'étaient pas anticipés, et on se retrouvait parfois en fin de sprint avec un développement livré qui ne correspondait pas exactement à ce qui était attendu. J'ai compris assez rapidement que reprocher ça au PO ne servait à rien, et que le rôle de l'équipe de dev était aussi de poser les bonnes questions en amont pour clarifier le besoin avant de commencer. J'ai commencé à participer plus activement aux sessions de rédaction des User Stories pour contribuer à combler cet écart, en reformulant les demandes et en identifiant les cas non couverts.`,
+          result: `Des tickets mieux cadrés en amont, moins d'allers-retours en cours de sprint, et une meilleure compréhension mutuelle entre le PO et l'équipe de développement. Cette expérience m'a surtout appris que la qualité d'une équipe ne se mesure pas seulement à son code, mais aussi à sa capacité à se comprendre collectivement.`,
+          realisationId: 'm-a-web'
+        },
+        {
+          title: `Contribuer efficacement sans chercher à tout contrôler`,
+          content: `Sur mes projets étudiants, j'avais plutôt un rôle d'exécutant : je prenais en charge ma partie, je la livrais, et je m'assurais qu'elle s'intègre bien au reste. Ce positionnement m'a appris quelque chose d'important, à savoir que bien contribuer à un projet collectif, ce n'est pas forcément avoir la vue d'ensemble ou prendre les décisions, c'est d'abord faire son travail correctement et ne pas créer de friction pour les autres. Sur DarwinSimulator par exemple, j'avais la responsabilité du module de gestion du terrain et de l'interface de visualisation. Tant que cette partie fonctionnait bien et s'interfaçait correctement avec le reste, j'aidais l'équipe à avancer. J'ai aussi appris que faire confiance aux autres sur leur périmètre, sans aller vérifier systématiquement ce qu'ils faisaient, rendait l'équipe globalement plus efficace.`,
+          result: `Des projets livrés dans les délais avec une cohérence technique satisfaisante, et une compréhension plus mature de ce que signifie vraiment contribuer à une équipe plutôt que simplement travailler à côté d'elle.`,
+          realisationId: 'simulateur-darwinien'
+        }
+      ],
+      relatedRealisations: ['m-a-web', 'simulateur-darwinien', 'bot-discord', 'jeu-2d-runner', 'dessin-vivant']
+    },
   ];
 
   readonly realisations: Realisation[] = [
