@@ -430,7 +430,7 @@ export class DataService {
       actions: [
         `Analyse du projet par une méthodologie SMART et une étude SWOT, avec plans de gestion des risques (panne matériel, affluence insuffisante, etc.).`,
         `Création de l'identité visuelle de l'événement (logo, affiches, flyers) et déploiement d'une campagne de communication multicanale (Instagram, mails, affichage physique).`,
-        `Mise en place de partenariats avec le Club Animé (prêt de comptes streaming) et In'Con (promotion croisée), et coordination avec Lucky Box pour le buffet à prix abordables.`,
+        `Mise en place de partenariats avec le "Club Anime" (prêt de comptes streaming) et l'évènement "In'Con" (promotion croisée), et coordination avec le restaurant "Lucky Box" pour le buffet à prix abordables.`,
         `Organisation logistique le jour J : répartition des bénévoles, gestion du buffet et suivi des diffusions simultanées sur les cinq salles.`
       ],
       team: `Projet organisé en binôme avec un camarade, avec une répartition naturelle des rôles : je me suis concentré sur la création des visuels et la communication digitale, tandis qu'il prenait en charge les relations partenaires et la coordination logistique. Cette complémentarité a été un facteur clé du bon déroulement de l'événement.`,
