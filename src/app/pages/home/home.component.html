@@ -119,7 +119,13 @@
             @for (c of techCompetences; track c.id; let i = $index) {
               <a [routerLink]="['/competences', c.id]" class="skill-item card" appReveal [revealDelay]="i * 60">
                 <div class="skill-item__icon" [style.background]="c.colorLight" [style.color]="c.color">
-                  {{ c.icon }}
+                  @if (c.svg) {
+                    <span [innerHTML]="c.svg | safeHtml"></span>
+                  } @else if (c.devicon) {
+                    <i [class]="c.devicon + ' colored'"></i>
+                  } @else {
+                    {{ c.icon }}
+                  }
                 </div>
                 <div class="skill-item__info">
                   <h4 class="skill-item__name">{{ c.title }}</h4>
@@ -139,7 +145,13 @@
             @for (c of humanCompetences; track c.id; let i = $index) {
               <a [routerLink]="['/competences', c.id]" class="skill-item card" appReveal [revealDelay]="i * 60">
                 <div class="skill-item__icon" [style.background]="c.colorLight" [style.color]="c.color">
-                  {{ c.icon }}
+                  @if (c.svg) {
+                    <span [innerHTML]="c.svg | safeHtml"></span>
+                  } @else if (c.devicon) {
+                    <i [class]="c.devicon + ' colored'"></i>
+                  } @else {
+                    {{ c.icon }}
+                  }
                 </div>
                 <div class="skill-item__info">
                   <h4 class="skill-item__name">{{ c.title }}</h4>

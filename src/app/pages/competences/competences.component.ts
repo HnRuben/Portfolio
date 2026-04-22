@@ -2,11 +2,12 @@ import { Component, ChangeDetectionStrategy, inject, signal } from '@angular/cor
 import { RouterLink } from '@angular/router';
 import { DataService } from '../../core/services/data.service';
 import { RevealDirective } from '../../shared/directives/scroll-reveal.directive';
+import { SafeHtmlPipe } from '../../shared/pipes/safe-html.pipe';
 
 @Component({
   selector: 'app-competences',
   standalone: true,
-  imports: [RouterLink, RevealDirective],
+  imports: [RouterLink, RevealDirective, SafeHtmlPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './competences.component.html',
   styleUrl: './competences.component.scss'

@@ -4,6 +4,8 @@ export interface Competence {
   type: 'tech' | 'human';
   level: 'Initié' | 'Autonome' | 'Confirmé' | 'Expert';
   icon: string;
+  devicon?: string;
+  svg?: string;
   color: string;
   colorLight: string;
   shortDescription: string;

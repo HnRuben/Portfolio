@@ -1,11 +1,12 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Competence } from '../../../core/models';
+import { SafeHtmlPipe } from '../../pipes/safe-html.pipe';
 
 @Component({
   selector: 'app-skill-badge',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, SafeHtmlPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <a
@@ -17,7 +18,13 @@ import { Competence } from '../../../core/models';
       [style.--badge-bg]="competence.colorLight"
       [title]="competence.title + ', ' + competence.level"
     >
-      <span class="skill-badge__icon">{{ competence.icon }}</span>
+      @if (competence.svg) {
+        <span class="skill-badge__icon" [innerHTML]="competence.svg | safeHtml"></span>
+      } @else if (competence.devicon) {
+        <i [class]="competence.devicon + ' skill-badge__icon'"></i>
+      } @else {
+        <span class="skill-badge__icon">{{ competence.icon }}</span>
+      }
       <span class="skill-badge__title">{{ competence.title }}</span>
       <span class="skill-badge__level">{{ competence.level }}</span>
     </a>

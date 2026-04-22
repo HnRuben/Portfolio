@@ -10,7 +10,13 @@
       </a>
       <div class="comp-header__inner">
         <div class="comp-header__icon" [style.color]="c.color" [style.background]="'white'">
-          {{ c.icon }}
+          @if (c.svg) {
+            <span [innerHTML]="c.svg | safeHtml"></span>
+          } @else if (c.devicon) {
+            <i [class]="c.devicon + ' colored'"></i>
+          } @else {
+            {{ c.icon }}
+          }
         </div>
         <div>
           <div style="display:flex;gap:.5rem;align-items:center;margin-bottom:.6rem;flex-wrap:wrap">
@@ -131,7 +137,13 @@
                 @if (oc.id !== c.id) {
                   <a [routerLink]="['/competences', oc.id]" class="other-comp"
                      [style.--oc-color]="oc.color" [style.--oc-bg]="oc.colorLight">
-                    <span>{{ oc.icon }}</span>
+                    @if (oc.svg) {
+                      <span [innerHTML]="oc.svg | safeHtml"></span>
+                    } @else if (oc.devicon) {
+                      <i [class]="oc.devicon + ' colored'"></i>
+                    } @else {
+                      <span>{{ oc.icon }}</span>
+                    }
                     <span>{{ oc.title }}</span>
                   </a>
                 }

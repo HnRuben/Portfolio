@@ -2,11 +2,12 @@ import { Component, ChangeDetectionStrategy, input, output, inject, HostListener
 import { RouterLink } from '@angular/router';
 import { Experience, Competence, Realisation } from '../../../core/models';
 import { DataService } from '../../../core/services/data.service';
+import { SafeHtmlPipe } from '../../pipes/safe-html.pipe';
 
 @Component({
   selector: 'app-experience-modal',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, SafeHtmlPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './experience-modal.component.html',
   styleUrl: './experience-modal.component.scss'

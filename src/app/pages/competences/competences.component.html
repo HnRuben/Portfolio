@@ -35,7 +35,13 @@
             @for (c of filteredTech; track c.id; let i = $index) {
               <a [routerLink]="['/competences', c.id]" class="comp-card card" appReveal [revealDelay]="i * 70">
                 <div class="comp-card__header" [style.background]="c.colorLight">
-                  <span class="comp-card__icon" [style.color]="c.color">{{ c.icon }}</span>
+                  @if (c.svg) {
+                    <span class="comp-card__icon" [style.color]="c.color" [innerHTML]="c.svg | safeHtml"></span>
+                  } @else if (c.devicon) {
+                    <i [class]="c.devicon + ' colored comp-card__icon'"></i>
+                  } @else {
+                    <span class="comp-card__icon" [style.color]="c.color">{{ c.icon }}</span>
+                  }
                   <span class="badge badge--tech">Technique</span>
                 </div>
                 <div class="comp-card__body">
@@ -66,7 +72,13 @@
             @for (c of filteredHuman; track c.id; let i = $index) {
               <a [routerLink]="['/competences', c.id]" class="comp-card card" appReveal [revealDelay]="i * 70">
                 <div class="comp-card__header" [style.background]="c.colorLight">
-                  <span class="comp-card__icon" [style.color]="c.color">{{ c.icon }}</span>
+                  @if (c.svg) {
+                    <span class="comp-card__icon" [style.color]="c.color" [innerHTML]="c.svg | safeHtml"></span>
+                  } @else if (c.devicon) {
+                    <i [class]="c.devicon + ' colored comp-card__icon'"></i>
+                  } @else {
+                    <span class="comp-card__icon" [style.color]="c.color">{{ c.icon }}</span>
+                  }
                   <span class="badge badge--human">Humaine</span>
                 </div>
                 <div class="comp-card__body">
