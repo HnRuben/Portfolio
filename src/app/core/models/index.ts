@@ -37,6 +37,8 @@ export interface Realisation {
   team: string;
   stakes: string;
   results: string;
+  lendemains: string;
+  regardCritique: string;
   techStack: string[];
   competences: string[];
 }
