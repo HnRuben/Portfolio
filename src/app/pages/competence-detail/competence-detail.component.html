@@ -63,6 +63,12 @@
                   <div class="anecdote__content">
                     <h3 class="anecdote__title">{{ a.title }}</h3>
                     <p class="anecdote__text">{{ a.content }}</p>
+                    @if (a.result) {
+                      <div class="anecdote__result">
+                        <span class="label">Résultat</span>
+                        <p>{{ a.result }}</p>
+                      </div>
+                    }
                     @if (a.realisationId) {
                       <a [routerLink]="['/realisations', a.realisationId]" class="anecdote__link">
                         Voir la réalisation associée →
@@ -71,6 +77,20 @@
                   </div>
                 </div>
               }
+            </div>
+          </div>
+
+          <div class="comp-block" appReveal>
+            <h2 class="comp-block__title">Mon autocritique</h2>
+            <div class="comp-block__body">
+              <p>{{ c.autocritique }}</p>
+            </div>
+          </div>
+
+          <div class="comp-block" appReveal>
+            <h2 class="comp-block__title">Mon évolution dans cette compétence</h2>
+            <div class="comp-block__body">
+              <p>{{ c.evolution }}</p>
             </div>
           </div>
 

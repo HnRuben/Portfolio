@@ -10,6 +10,8 @@ export interface Competence {
   definition: string;
   context: string;
   anecdotes: Anecdote[];
+  autocritique: string;
+  evolution: string;
   relatedRealisations: string[];
 }
 

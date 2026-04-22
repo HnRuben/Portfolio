@@ -32,6 +32,8 @@ export class DataService {
           realisationId: 'm-a-web'
         }
       ],
+      autocritique: `Je maîtrise bien les fondamentaux de Spring Boot dans un contexte professionnel : les couches Controller/Service/Repository, la gestion des entités JPA, la construction d'APIs REST, les tests JUnit. Là où je suis encore en progression, c'est sur les aspects plus avancés du framework : Spring Security dans des configurations complexes, la gestion fine des transactions, ou certains patterns d'architecture comme l'event sourcing que je n'ai pas eu l'occasion de pratiquer. Dans mon poste actuel, ce niveau me permet de contribuer efficacement sans être bloquant pour l'équipe, mais je suis clairement encore loin d'un profil senior qui concevrait une architecture backend de bout en bout. Ce qui a rendu mon acquisition relativement rapide, c'est que j'avais déjà une base solide en Java pur depuis le Bachelor, ce qui m'a permis de me concentrer sur le framework plutôt que sur le langage. Si je devais conseiller quelqu'un qui commence, je dirais de ne pas chercher à tout apprendre de Spring en même temps : commencer par Spring Boot avec une vraie application, comprendre pourquoi les beans s'assemblent comme ils le font, puis aller chercher Spring Security et les transactions quand on en a vraiment besoin concrètement.`,
+      evolution: `À moyen terme, je veux approfondir Spring Security et mieux comprendre les choix d'architecture backend qui se font dans les équipes seniors, notamment les patterns comme le CQRS ou l'event-driven. Mon alternance chez Aubay continue de me faire progresser naturellement sur ces sujets au fil des sprints. Côté formation, le Mastère aborde des architectures logicielles avancées qui devraient me donner un cadre théorique solide à combiner avec la pratique quotidienne.`,
       relatedRealisations: ['m-a-web']
     },
 
@@ -61,6 +63,8 @@ export class DataService {
           realisationId: 'simulateur-darwinien'
         }
       ],
+      autocritique: `Git c'est une compétence que j'utilise tous les jours depuis plusieurs années, et je me sens vraiment à l'aise dessus. Ce que je fais couramment sans y penser : les branches, les merges, les rebases, la résolution de conflits, les revues de MR. Là où je suis encore perfectible, c'est sur des usages très avancés dans des contextes de gros monorepos ou des stratégies de branching élaborées que je n'ai pas encore eu l'occasion de pratiquer. Dans mon profil d'ingénieur, Git est une compétence transversale indispensable : pas vraiment différenciante en soi, mais sa mauvaise maîtrise crée des frictions dans n'importe quelle équipe. Ce que j'aurais conseillé à mon moi de première année : apprendre Git en ligne de commande dès le début, pas avec une interface graphique. Comprendre ce qui se passe vraiment derrière les boutons, ça change tout.`,
+      evolution: `Je ne prévois pas de formation spécifique sur Git, c'est une compétence qui progresse naturellement avec la pratique en équipe. Ce que je veux travailler sur le long terme, c'est avoir une discipline plus rigoureuse dans mes messages de commit et dans la structure de mes branches, des habitudes qui font la différence dans un projet professionnel. Mon alternance me donne régulièrement des occasions de me confronter à des situations Git complexes.`,
       relatedRealisations: ['m-a-web', 'simulateur-darwinien', 'bot-discord', 'jeu-2d-runner']
     },
 
@@ -90,6 +94,8 @@ export class DataService {
           realisationId: 'm-a-web'
         }
       ],
+      autocritique: `Je me situe à un niveau Autonome sur le CI/CD, ce qui veut dire que je comprends bien les concepts et que j'ai travaillé sur des pipelines réels, mais que je n'ai pas encore la maîtrise suffisante pour en concevoir un de zéro ou pour optimiser une infrastructure complexe de manière autonome. Ce que je sais faire : lire, déboguer et modifier des pipelines existants, comprendre les étapes de build, test, qualité et déploiement, intégrer des outils d'analyse statique comme SonarQube. Ce que je sais moins bien : orchestrer des pipelines sur des architectures distribuées, gérer des déploiements multi-environnements complexes, ou configurer des runners dans des infrastructures cloud. Dans mon profil, le CI/CD est une compétence que je considère importante mais pas centrale : c'est plutôt une compétence de "profil complet" que je cultive pour ne pas être dépendant d'un DevOps à chaque fois que je veux pousser du code.`,
+      evolution: `Je veux atteindre un niveau Confirmé d'ici la fin de mon alternance. Le Mastère aborde des modules DevOps approfondis qui devraient m'y aider sur le plan théorique. J'aimerais aussi pratiquer davantage avec GitHub Actions sur mes projets personnels, qui est un outil plus accessible que Jenkins pour commencer à construire ses propres pipelines depuis zéro.`,
       relatedRealisations: ['m-a-web']
     },
 
@@ -119,6 +125,8 @@ export class DataService {
           realisationId: 'm-a-web'
         }
       ],
+      autocritique: `Je me considère Autonome sur la conception et la consommation d'APIs REST. Je suis capable de concevoir des endpoints cohérents, de gérer les codes de retour HTTP correctement, de sécuriser des routes et d'intégrer des APIs tierces. Là où je manque encore d'expérience, c'est sur la conception d'APIs à grande échelle avec des contraintes de versioning, de rétrocompatibilité et de documentation formelle type OpenAPI/Swagger dans un vrai contexte de production. Dans mon alternance, j'ai surtout étendu des APIs existantes plutôt qu'en conçu des nouvelles de bout en bout, ce qui explique ce niveau Autonome plutôt que Confirmé. C'est une compétence centrale dans mon profil de développeur full-stack : sans une bonne maîtrise des APIs, il est impossible de faire travailler proprement un frontend et un backend ensemble.`,
+      evolution: `Je veux progresser vers un niveau Confirmé en travaillant sur la conception d'APIs complètes dans des projets où j'ai plus de latitude sur les choix d'architecture. Je m'intéresse aussi à GraphQL comme alternative à REST pour certains cas d'usage, un sujet que je compte explorer sur un projet personnel à moyen terme.`,
       relatedRealisations: ['m-a-web', 'bot-discord']
     },
 
@@ -148,6 +156,8 @@ export class DataService {
           realisationId: 'm-a-web'
         }
       ],
+      autocritique: `L'algorithmique est une compétence que j'ai construite progressivement et qui se manifeste dans mon travail au quotidien, surtout sur les problèmes de modélisation métier complexe et d'optimisation. Je me sens Confirmé sur les algorithmes classiques, les structures de données, la complexité. Ce que je maîtrise moins bien, c'est le domaine de l'algorithmique avancée type programmation dynamique ou les algorithmes de graphe complexes, des sujets que j'ai effleurés mais pas vraiment pratiqués en profondeur. Dans mon métier de développeur full-stack, l'algorithmique n'est pas sollicitée à chaque ticket, mais elle fait la différence quand il faut optimiser un traitement lent ou analyser pourquoi quelque chose ne passe pas à l'échelle. Ce qui a surtout développé cette compétence, c'est le projet DarwinSimulator, qui m'a forcé à réfléchir à des problèmes de simulation impossibles à résoudre en cherchant juste Stack Overflow.`,
+      evolution: `Je veux maintenir ce niveau et progresser vers Expert sur les algorithmes liés à l'IA et au machine learning, dans le cadre de mon Mastère en ingénierie de l'IA. C'est un domaine où l'algorithmique et les mathématiques se rejoignent vraiment, et que je compte approfondir activement via les modules du Mastère et des projets personnels.`,
       relatedRealisations: ['m-a-web', 'simulateur-darwinien', 'bot-discord', 'jeu-2d-runner']
     },
 
@@ -177,6 +187,8 @@ export class DataService {
           realisationId: 'm-a-web'
         }
       ],
+      autocritique: `Angular est le framework sur lequel j'ai passé le plus de temps en contexte professionnel, et c'est clairement ma compétence frontend principale. Je suis Confirmé : je maîtrise les composants, les services, le routing, les formulaires, RxJS pour les cas courants, et les signals depuis Angular 17. Là où je progresse encore, c'est sur les optimisations avancées de performance (fine-grained change detection, lazy loading poussé) et sur les patterns d'architecture frontend à grande échelle. Angular est très importante dans mon profil actuel parce que c'est le framework de FabTools et CoralVision, les deux applications sur lesquelles je travaille en alternance, et une bonne partie de ma valeur ajoutée chez Aubay passe par là. J'ai acquis Angular relativement vite parce que j'avais déjà pratiqué VueJS en Bachelor, ce qui m'a donné les réflexes des frameworks à composants avant même de toucher Angular.`,
+      evolution: `Je veux approfondir la partie performance et architecture frontend, et mieux comprendre comment les grandes équipes organisent leurs projets Angular sur le long terme. Je suis aussi attentif aux évolutions du framework, notamment tout ce qui tourne autour des signals qui changent vraiment la façon d'écrire les composants. Ce portfolio m'a d'ailleurs permis de les explorer plus librement qu'en contexte professionnel.`,
       relatedRealisations: ['m-a-web']
     },
 
@@ -206,6 +218,8 @@ export class DataService {
           realisationId: 'm-a-web'
         }
       ],
+      autocritique: `Je me considère Confirmé sur l'agilité dans le sens où j'ai vraiment pratiqué les rituels agiles dans un contexte professionnel, pas seulement en simulation scolaire. Ce que je sais bien faire : m'inscrire dans un sprint, estimer des tâches, participer activement aux cérémonies, m'adapter à l'évolution des priorités en cours de sprint. Ce que je maîtrise moins bien, c'est la posture de facilitateur ou de Scrum Master : j'ai toujours été du côté développeur, jamais du côté animation des rituels d'équipe. L'agilité est une compétence transversale que je considère essentielle dans mon profil, pas parce que c'est à la mode, mais parce que sans elle, travailler en équipe sur un projet qui évolue devient vite ingérable. Ce que je conseillerais à quelqu'un qui commence : ne pas confondre "faire de l'agile" et "faire du Scrum avec Jira". L'essentiel c'est l'état d'esprit, pas les outils.`,
+      evolution: `Je veux continuer à pratiquer l'agilité dans des contextes variés, et potentiellement aller vers une certification à moyen terme si l'occasion se présente. Ce qui m'intéresse aussi, c'est de mieux comprendre les limites de l'agilité dans certains contextes, les cas où le framework Scrum crée plus de bruit que de valeur, pour avoir un regard plus critique et mature sur cette méthode.`,
       relatedRealisations: ['m-a-web', 'simulateur-darwinien', 'bot-discord', 'jeu-2d-runner']
     },
 
@@ -235,6 +249,8 @@ export class DataService {
           realisationId: 'dessin-vivant'
         }
       ],
+      autocritique: `Je me situe à Autonome sur l'adaptabilité, et j'ai choisi ce niveau en toute honnêteté parce que je sais m'adapter, mais pas toujours aussi vite ou aussi confortablement que je le voudrais. Changer de technologie ne me fait pas peur, mais il m'arrive encore d'avoir des phases d'inconfort quand je dois basculer de contexte très rapidement, surtout quand les bases manquent. Ce que je fais bien : repartir de zéro sur une nouvelle techno sans me bloquer, poser les bonnes questions, aller chercher l'information moi-même. Ce que je veux améliorer : ma capacité à être efficace plus vite dans les premiers jours sur quelque chose de nouveau. Dans mon profil, l'adaptabilité est centrale parce que le développement logiciel ne laisse pas beaucoup de place à ceux qui refusent de bouger. Ce qui m'aide le plus, c'est d'avoir acquis un socle de réflexes transversaux qui fonctionnent quelle que soit la techno : lire la doc officielle, comprendre les exemples avant de les copier, interroger les profils seniors.`,
+      evolution: `Je ne cherche pas à "former" mon adaptabilité au sens académique, c'est une compétence qui se développe en se jetant dans des situations nouvelles. Ce que je vais continuer à faire, c'est m'exposer volontairement à des technologies que je ne connais pas via des projets personnels, pour que le déstabilisant devienne progressivement familier.`,
       relatedRealisations: ['m-a-web', 'simulateur-darwinien', 'bot-discord', 'jeu-2d-runner', 'dessin-vivant']
     },
 
@@ -264,6 +280,8 @@ export class DataService {
           realisationId: 'dessin-vivant'
         }
       ],
+      autocritique: `La créativité, je la classe Confirmé parce qu'elle est vraiment présente dans ma façon de travailler et dans les projets que je choisis de faire, mais elle ne s'exprime pas de la même manière dans tous les contextes. En projet personnel ou événementiel, je me sens libre d'aller sur des idées un peu folles. En contexte professionnel, la créativité se traduit plutôt par la capacité à trouver des solutions élégantes à des problèmes contraints, ce qui est une forme différente mais tout aussi réelle. Là où je suis encore en progression, c'est sur la créativité de conception : savoir proposer une architecture ou une fonctionnalité originale en partant d'un besoin métier flou demande une expérience et une confiance que je n'ai pas encore complètement. Cette compétence n'est pas toujours visible sur un CV technique, mais c'est souvent elle qui fait la différence entre un développeur qui exécute et un développeur qui propose.`,
+      evolution: `Je veux continuer à cultiver cette compétence en dehors du travail, via des projets personnels et la création graphique. À moyen terme, j'aimerais mieux articuler créativité technique et créativité de conception, pour être capable de proposer des idées originales dès les phases de réflexion produit, pas seulement à l'implémentation.`,
       relatedRealisations: ['simulateur-darwinien', 'bot-discord', 'jeu-2d-runner', 'dessin-vivant']
     },
 
@@ -293,6 +311,8 @@ export class DataService {
           realisationId: 'simulateur-darwinien'
         }
       ],
+      autocritique: `Je me situe Confirmé sur le travail en équipe parce que c'est quelque chose que j'ai vraiment pratiqué dans des contextes variés, avec des équipes de tailles et de compositions très différentes. Ce que je fais naturellement bien : m'intégrer dans une équipe existante, contribuer sans créer de friction, adapter ma communication à mes interlocuteurs qu'ils soient développeurs, PO ou équipes RH. Ce que je veux encore développer, c'est ma capacité à prendre des initiatives sur l'organisation collective, proposer des améliorations dans les rituels ou dans la façon dont l'équipe communique, sans que ce soit perçu comme une ingérence. Dans mon profil d'ingénieur, le travail en équipe n'est pas un "plus", c'est une condition de base. Un développeur qui ne sait pas collaborer ralentit tout le monde, peu importe son niveau technique. Ma vitesse d'acquisition sur ce point a été favorisée par le fait de pratiquer dès les premiers semestres à l'ESIEA, dans des groupes où on n'avait pas le choix que de s'organiser ensemble pour avancer.`,
+      evolution: `Je veux progresser vers des rôles où j'ai plus de responsabilités collectives, idéalement prendre la coordination technique d'une équipe sur un projet à moyen terme, pas pour le titre, mais pour m'exercer à cette dimension de leadership qui me manque encore. Pas de formation spécifique prévue, mais je m'intéresse aux ressources sur les dynamiques d'équipe et la gestion de projet technique pour mieux comprendre ce qui fait qu'une équipe fonctionne vraiment bien.`,
       relatedRealisations: ['m-a-web', 'simulateur-darwinien', 'bot-discord', 'jeu-2d-runner', 'dessin-vivant']
     },
   ];
