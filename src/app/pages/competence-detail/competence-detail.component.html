@@ -83,14 +83,18 @@
           <div class="comp-block" appReveal>
             <h2 class="comp-block__title">Mon autocritique</h2>
             <div class="comp-block__body">
-              <p>{{ c.autocritique }}</p>
+              @for (p of paragraphs(c.autocritique); track p) {
+                <p>{{ p }}</p>
+              }
             </div>
           </div>
 
           <div class="comp-block" appReveal>
             <h2 class="comp-block__title">Mon évolution dans cette compétence</h2>
             <div class="comp-block__body">
-              <p>{{ c.evolution }}</p>
+              @for (p of paragraphs(c.evolution); track p) {
+                <p>{{ p }}</p>
+              }
             </div>
           </div>
 

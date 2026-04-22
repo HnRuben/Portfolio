@@ -29,4 +29,8 @@ export class CompetenceDetailComponent {
   getLevelIndex(level: string): number {
     return ['Initié', 'Autonome', 'Confirmé', 'Expert'].indexOf(level);
   }
+
+  paragraphs(text: string): string[] {
+    return text.split('\n\n').filter(p => p.trim().length > 0);
+  }
 }
