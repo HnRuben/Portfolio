@@ -205,6 +205,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .75rem;
   font-weight: 500;
   color: var(--color-text-muted);
+
+  &--human {
+    background: color-mix(in srgb, #f97316 8%, var(--color-bg));
+    border-color: color-mix(in srgb, #f97316 30%, transparent);
+    color: #c2410c;
+  }
 }
 
 /* ============================================================

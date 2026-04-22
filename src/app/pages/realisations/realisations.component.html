@@ -34,7 +34,7 @@
               <span class="real-card__type">
                 @switch (r.type) {
                   @case ('entreprise') { 🏢 Entreprise }
-                  @case ('personnel')  { 💻 Personnel }
+                  @case ('esiea')      { 🎓 ESIEA }
                   @case ('evenement')  { 🎉 Événement }
                 }
               </span>
@@ -52,6 +52,12 @@
                 <div class="real-card__stack">
                   @for (t of r.techStack; track t) {
                     <span class="tag">{{ t }}</span>
+                  }
+                </div>
+              } @else if (getHumanCompetenceTitles(r).length > 0) {
+                <div class="real-card__stack">
+                  @for (c of getHumanCompetenceTitles(r); track c) {
+                    <span class="tag tag--human">{{ c }}</span>
                   }
                 </div>
               }
