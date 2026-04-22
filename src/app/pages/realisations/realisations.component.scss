@@ -111,14 +111,14 @@
     font-size: .9rem;
     color: var(--color-text-muted);
     line-height: 1.6;
-    flex: 1;
   }
 
   &__stack {
     display: flex;
     flex-wrap: wrap;
     gap: .35rem;
-    margin-top: .25rem;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   &__footer {
