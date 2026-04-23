@@ -41,6 +41,7 @@ export interface Realisation {
   actions: string[];
   team: string;
   stakes: string;
+  risks: string;
   results: string;
   lendemains: string;
   regardCritique: string;
