@@ -116,7 +116,11 @@
               <div class="sidebar-reals">
                 @for (r of relatedRealisations(); track r.id) {
                   <a [routerLink]="['/realisations', r.id]" class="sidebar-real">
-                    <span class="sidebar-real__emoji">{{ r.emoji }}</span>
+                    @if (r.svg) {
+                      <span class="sidebar-real__emoji" [style.color]="r.color" [style.background]="r.colorLight" [innerHTML]="r.svg | safeHtml"></span>
+                    } @else {
+                      <span class="sidebar-real__emoji">{{ r.emoji }}</span>
+                    }
                     <div>
                       <p class="sidebar-real__name">{{ r.shortTitle }}</p>
                       <p class="sidebar-real__period body-sm" style="color:var(--color-text-muted)">{{ r.period }}</p>
