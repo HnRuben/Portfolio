@@ -36,4 +36,9 @@ export class CompetencesComponent {
   getRealisationsForCompetence(id: string): number {
     return this.data.getRealisationsByCompetence(id).length;
   }
+
+  getLevelPercent(level: string): number {
+    const map: Record<string, number> = { 'Initié': 25, 'Autonome': 50, 'Confirmé': 75, 'Expert': 100 };
+    return map[level] ?? 0;
+  }
 }

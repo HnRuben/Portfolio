@@ -9,19 +9,109 @@
         6 compétences techniques et 4 compétences humaines développées sur deux ans
         d'alternance et de projets personnels.
       </p>
+    </div>
+  </section>
 
-      <!-- Filter tabs -->
-      <div class="filter-tabs" appReveal [revealDelay]="220">
-        <button class="filter-tab" [class.active]="activeFilter() === 'all'"   (click)="setFilter('all')">Toutes</button>
-        <button class="filter-tab" [class.active]="activeFilter() === 'tech'"  (click)="setFilter('tech')">Techniques</button>
-        <button class="filter-tab" [class.active]="activeFilter() === 'human'" (click)="setFilter('human')">Humaines</button>
+  <!-- Schéma comparatif -->
+  <section class="section section--sm schema-section">
+    <div class="container">
+      <div class="schema-header" appReveal>
+        <div>
+          <h2 class="schema-title">Vue comparative</h2>
+          <p class="schema-subtitle">Position de chaque compétence sur l'échelle de maîtrise</p>
+        </div>
+        <div class="schema-legend">
+          <div class="schema-legend__track">
+            <div class="schema-legend__seg schema-legend__seg--1"></div>
+            <div class="schema-legend__seg schema-legend__seg--2"></div>
+            <div class="schema-legend__seg schema-legend__seg--3"></div>
+            <div class="schema-legend__seg schema-legend__seg--4"></div>
+          </div>
+          <div class="schema-legend__labels">
+            <span>Initié</span><span>Autonome</span><span>Confirmé</span><span>Expert</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="schema-groups">
+
+        <div class="schema-group">
+          <div class="schema-group__label">
+            <span class="badge badge--tech">Techniques</span>
+          </div>
+          <div class="schema-rows">
+            @for (c of techCompetences; track c.id; let i = $index) {
+              <a [routerLink]="['/competences', c.id]" class="schema-row" appReveal [revealDelay]="i * 60">
+                <div class="schema-row__icon" [style.background]="c.colorLight" [style.color]="c.color">
+                  @if (c.svg) {
+                    <span [innerHTML]="c.svg | safeHtml"></span>
+                  } @else if (c.devicon) {
+                    <i [class]="c.devicon + ' colored'"></i>
+                  } @else {
+                    {{ c.icon }}
+                  }
+                </div>
+                <span class="schema-row__name">{{ c.title }}</span>
+                <div class="schema-row__track">
+                  <div class="schema-row__fill" [style.width.%]="getLevelPercent(c.level)" [style.background]="c.color"></div>
+                  <div class="schema-row__tick" style="left:25%"></div>
+                  <div class="schema-row__tick" style="left:50%"></div>
+                  <div class="schema-row__tick" style="left:75%"></div>
+                </div>
+                <span class="badge badge--level schema-row__badge">{{ c.level }}</span>
+              </a>
+            }
+          </div>
+        </div>
+
+        <div class="schema-group">
+          <div class="schema-group__label">
+            <span class="badge badge--human">Humaines</span>
+          </div>
+          <div class="schema-rows">
+            @for (c of humanCompetences; track c.id; let i = $index) {
+              <a [routerLink]="['/competences', c.id]" class="schema-row" appReveal [revealDelay]="i * 60">
+                <div class="schema-row__icon" [style.background]="c.colorLight" [style.color]="c.color">
+                  @if (c.svg) {
+                    <span [innerHTML]="c.svg | safeHtml"></span>
+                  } @else if (c.devicon) {
+                    <i [class]="c.devicon + ' colored'"></i>
+                  } @else {
+                    {{ c.icon }}
+                  }
+                </div>
+                <span class="schema-row__name">{{ c.title }}</span>
+                <div class="schema-row__track">
+                  <div class="schema-row__fill" [style.width.%]="getLevelPercent(c.level)" [style.background]="c.color"></div>
+                  <div class="schema-row__tick" style="left:25%"></div>
+                  <div class="schema-row__tick" style="left:50%"></div>
+                  <div class="schema-row__tick" style="left:75%"></div>
+                </div>
+                <span class="badge badge--level schema-row__badge">{{ c.level }}</span>
+              </a>
+            }
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Matrix view -->
+  <!-- Détail des compétences -->
   <section class="section section--sm">
     <div class="container">
+
+      <div class="cards-header" appReveal>
+        <div class="cards-header__text">
+          <h2 class="cards-title">Explorer en détail</h2>
+          <p class="cards-subtitle">Cliquez sur une compétence pour accéder à sa définition, ses preuves et son autocritique.</p>
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-tab" [class.active]="activeFilter() === 'all'"   (click)="setFilter('all')">Toutes</button>
+          <button class="filter-tab" [class.active]="activeFilter() === 'tech'"  (click)="setFilter('tech')">Techniques</button>
+          <button class="filter-tab" [class.active]="activeFilter() === 'human'" (click)="setFilter('human')">Humaines</button>
+        </div>
+      </div>
 
       <!-- Tech section -->
       @if (activeFilter() !== 'human') {

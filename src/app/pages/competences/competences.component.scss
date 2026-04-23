@@ -36,7 +36,198 @@
   }
 }
 
-// Section
+// ── Schéma comparatif ─────────────────────────────────────────────
+.schema-section {
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding-block: clamp(2rem, 3.5vw, 2.75rem);
+}
+
+.schema-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.schema-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: .25rem;
+}
+
+.schema-subtitle {
+  font-size: .875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+// Standalone legend in the schema header
+.schema-legend {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  min-width: 300px;
+
+  @media (max-width: 640px) { display: none; }
+
+  &__track {
+    display: flex;
+    height: 8px;
+    gap: 6px;
+  }
+
+  &__seg {
+    flex: 1;
+    border-radius: 999px;
+
+    &--1 { background: #CBD5E1; }
+    &--2 { background: #94A3B8; }
+    &--3 { background: #64748B; }
+    &--4 { background: #334155; }
+  }
+
+  &__labels {
+    display: flex;
+    gap: 6px;
+
+    span {
+      flex: 1;
+      font-size: .60rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      text-align: center;
+    }
+  }
+}
+
+.schema-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 3rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.schema-group {
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 1rem;
+  }
+
+}
+
+.schema-rows {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.schema-row {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .45rem .5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background .18s;
+
+  &:hover { background: var(--color-bg); }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+
+    svg, i { width: 1em; height: 1em; }
+  }
+
+  &__name {
+    width: 7.5rem;
+    flex-shrink: 0;
+    font-size: .875rem;
+    font-weight: 600;
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__track {
+    flex: 1;
+    height: 8px;
+    background: var(--color-border);
+    border-radius: 999px;
+    position: relative;
+    overflow: visible;
+  }
+
+  &__fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width .6s cubic-bezier(.4,0,.2,1);
+    position: relative;
+    z-index: 1;
+  }
+
+  &__tick {
+    position: absolute;
+    top: -3px;
+    width: 2px;
+    height: 14px;
+    background: var(--color-bg-alt);
+    border-radius: 1px;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  &__badge {
+    flex-shrink: 0;
+    font-size: .72rem;
+  }
+}
+
+// ── Cards section header ─────────────────────────────────────────────
+.cards-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.cards-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: .25rem;
+}
+
+.cards-subtitle {
+  font-size: .875rem;
+  color: var(--color-text-muted);
+}
+
+// ── Section ─────────────────────────────────────────────────────────
 .comp-section {
   margin-bottom: 3rem;
 
