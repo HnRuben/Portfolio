@@ -53,9 +53,9 @@
           <div class="comp-block" appReveal>
             <h2 class="comp-block__title">Ma définition</h2>
             <div class="comp-block__body">
-              <p>{{ c.definition }}</p>
+              <p [innerHTML]="c.definition | mdInline | safeHtml"></p>
               @if (c.context) {
-                <p>{{ c.context }}</p>
+                <p [innerHTML]="c.context | mdInline | safeHtml"></p>
               }
             </div>
           </div>
@@ -68,11 +68,11 @@
                   <div class="anecdote__number">{{ i + 1 }}</div>
                   <div class="anecdote__content">
                     <h3 class="anecdote__title">{{ a.title }}</h3>
-                    <p class="anecdote__text">{{ a.content }}</p>
+                    <p class="anecdote__text" [innerHTML]="a.content | mdInline | safeHtml"></p>
                     @if (a.result) {
                       <div class="anecdote__result">
                         <span class="label">Résultat</span>
-                        <p>{{ a.result }}</p>
+                        <p [innerHTML]="a.result | mdInline | safeHtml"></p>
                       </div>
                     }
                     @if (a.realisationId) {
@@ -90,7 +90,7 @@
             <h2 class="comp-block__title">Mon autocritique</h2>
             <div class="comp-block__body">
               @for (p of paragraphs(c.autocritique); track p) {
-                <p>{{ p }}</p>
+                <p [innerHTML]="p | mdInline | safeHtml"></p>
               }
             </div>
           </div>
@@ -99,7 +99,7 @@
             <h2 class="comp-block__title">Mon évolution dans cette compétence</h2>
             <div class="comp-block__body">
               @for (p of paragraphs(c.evolution); track p) {
-                <p>{{ p }}</p>
+                <p [innerHTML]="p | mdInline | safeHtml"></p>
               }
             </div>
           </div>

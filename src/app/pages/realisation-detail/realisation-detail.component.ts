@@ -4,13 +4,14 @@ import { DataService } from '../../core/services/data.service';
 import { RevealDirective } from '../../shared/directives/scroll-reveal.directive';
 import { SkillBadgeComponent } from '../../shared/components/skill-badge/skill-badge.component';
 import { SafeHtmlPipe } from '../../shared/pipes/safe-html.pipe';
+import { MdInlinePipe } from '../../shared/pipes/md-inline.pipe';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-realisation-detail',
   standalone: true,
-  imports: [RouterLink, RevealDirective, SkillBadgeComponent, SafeHtmlPipe],
+  imports: [RouterLink, RevealDirective, SkillBadgeComponent, SafeHtmlPipe, MdInlinePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './realisation-detail.component.html',
   styleUrl: './realisation-detail.component.scss'

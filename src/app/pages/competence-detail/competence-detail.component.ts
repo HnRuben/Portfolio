@@ -3,13 +3,14 @@ import { RouterLink, ActivatedRoute } from '@angular/router';
 import { DataService } from '../../core/services/data.service';
 import { RevealDirective } from '../../shared/directives/scroll-reveal.directive';
 import { SafeHtmlPipe } from '../../shared/pipes/safe-html.pipe';
+import { MdInlinePipe } from '../../shared/pipes/md-inline.pipe';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-competence-detail',
   standalone: true,
-  imports: [RouterLink, RevealDirective, SafeHtmlPipe],
+  imports: [RouterLink, RevealDirective, SafeHtmlPipe, MdInlinePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './competence-detail.component.html',
   styleUrl: './competence-detail.component.scss'
