@@ -30,11 +30,17 @@
             </div>
             <div class="about-quick__item">
               <span class="label" style="color:var(--color-accent)">Localisation</span>
-              <span>📍 Ivry-sur-Seine</span>
+              <span style="display:flex;align-items:center;gap:.35rem">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Ivry-sur-Seine
+              </span>
             </div>
             <div class="about-quick__item">
               <span class="label" style="color:var(--color-accent)">Disponibilité</span>
-              <span>🎓 Diplôme prévu juillet 2026</span>
+              <span style="display:flex;align-items:center;gap:.35rem">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                Diplôme prévu juillet 2026
+              </span>
             </div>
             <div class="about-quick__item">
               <span class="label" style="color:var(--color-accent)">Contact</span>
@@ -64,7 +70,7 @@
             <div class="values-grid">
               @for (v of values; track v.label) {
                 <div class="value-card">
-                  <span class="value-card__icon">{{ v.icon }}</span>
+                  <span class="value-card__icon" [innerHTML]="v.icon | safeHtml"></span>
                   <h3 class="value-card__label">{{ v.label }}</h3>
                   <p class="value-card__desc">{{ v.desc }}</p>
                 </div>
@@ -88,7 +94,7 @@
               En dehors du développement, je pratique le basketball et le vélo, le basketball m'a notamment appris les valeurs de stratégie collective que je retrouve dans les projets en équipe. La création graphique, principalement via Canva pour des projets assiociatifs, nourrit ma sensibilité au design et m'a été utile aussi bien pour mon travail de développeur côté Front que pour la communication de l'événement Dessin Vivant par exemple. J'ai aussi une passion pour les jeux vidéo qui ne se limite pas au divertissement : elle inspire directement mes projets de développement, comme en témoigne la création du jeu runner 2D que l'on a appelé "C2", ou le projet Darwin Simulator créé avec Unity.
             </p>
             <div class="interests">
-              @for (i of interests; track i) {
+              @for (i of interests; track $index) {
                 <span class="tag">{{ i }}</span>
               }
             </div>
@@ -105,23 +111,23 @@
       <div class="circular-nav__inner" appReveal>
         <h2 class="circular-nav__title">Explorer mon portfolio</h2>
         <div class="circular-nav__links">
-          <a routerLink="/competences" class="circular-nav__link">
-            <span>🧠</span>
+          <a routerLink="/competences" class="circular-nav__link" style="--c:#4F46E5;--c-bg:rgba(79,70,229,.12)">
+            <span class="circular-nav__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
             <strong>Compétences</strong>
             <span class="label">10 compétences</span>
           </a>
-          <a routerLink="/realisations" class="circular-nav__link">
-            <span>🚀</span>
+          <a routerLink="/realisations" class="circular-nav__link" style="--c:#7C3AED;--c-bg:rgba(124,58,237,.12)">
+            <span class="circular-nav__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span>
             <strong>Réalisations</strong>
             <span class="label">5 projets</span>
           </a>
-          <a routerLink="/parcours" class="circular-nav__link">
-            <span>🗺️</span>
+          <a routerLink="/parcours" class="circular-nav__link" style="--c:#0D9488;--c-bg:rgba(13,148,136,.12)">
+            <span class="circular-nav__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg></span>
             <strong>Parcours</strong>
             <span class="label">Mon histoire</span>
           </a>
-          <a routerLink="/contact" class="circular-nav__link">
-            <span>✉️</span>
+          <a routerLink="/contact" class="circular-nav__link" style="--c:#F59E0B;--c-bg:rgba(245,158,11,.12)">
+            <span class="circular-nav__icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
             <strong>Contact</strong>
             <span class="label">Me joindre</span>
           </a>

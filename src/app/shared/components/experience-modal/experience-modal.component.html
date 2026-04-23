@@ -64,7 +64,11 @@
             @for (id of experience().relatedRealisations; track id) {
               @if (getRealisationById(id); as r) {
                 <a [routerLink]="['/realisations', id]" (click)="close()" class="modal__link-card">
-                  <span class="modal__link-emoji">{{ r.emoji }}</span>
+                  @if (r.svg) {
+                    <span class="modal__link-emoji" [style.color]="r.color" [style.background]="r.colorLight" [innerHTML]="r.svg | safeHtml"></span>
+                  } @else {
+                    <span class="modal__link-emoji">{{ r.emoji }}</span>
+                  }
                   <span class="modal__link-label">{{ r.shortTitle }}</span>
                   <span class="modal__link-arrow">→</span>
                 </a>
@@ -82,11 +86,11 @@
               @if (getCompetenceById(id); as c) {
                 <a [routerLink]="['/competences', id]" (click)="close()" class="modal__competence-tag">
                   @if (c.svg) {
-                    <span [innerHTML]="c.svg | safeHtml"></span>
+                    <span [style.color]="c.color" [innerHTML]="c.svg | safeHtml"></span>
                   } @else if (c.devicon) {
                     <i [class]="c.devicon + ' colored'"></i>
                   } @else {
-                    {{ c.icon }}
+                    <span [style.color]="c.color">{{ c.icon }}</span>
                   }
                   {{ c.title }}
                 </a>
