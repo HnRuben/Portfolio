@@ -145,8 +145,13 @@
     font-size: 1.75rem;
     display: block;
     margin-bottom: .5rem;
-    color: var(--color-accent);
+    color: var(--icon-color, var(--color-accent));
   }
+
+  &:nth-child(1) { --icon-color: #4F46E5; }
+  &:nth-child(2) { --icon-color: #7C3AED; }
+  &:nth-child(3) { --icon-color: #0D9488; }
+  &:nth-child(4) { --icon-color: #F59E0B; }
 
   &__label {
     font-family: var(--font-display);
