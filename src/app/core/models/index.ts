@@ -29,6 +29,7 @@ export interface Realisation {
   title: string;
   shortTitle: string;
   emoji: string;
+  svg?: string;
   type: 'entreprise' | 'esiea' | 'evenement';
   period: string;
   coverGradient: string;

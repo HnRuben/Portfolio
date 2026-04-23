@@ -9,7 +9,11 @@
         Toutes les réalisations
       </a>
       <div class="real-hero__inner">
-        <span class="real-hero__emoji">{{ r.emoji }}</span>
+        @if (r.svg) {
+          <span class="real-hero__emoji" style="color:white" [innerHTML]="r.svg | safeHtml"></span>
+        } @else {
+          <span class="real-hero__emoji">{{ r.emoji }}</span>
+        }
         <div>
           <div class="real-hero__meta">
             <span class="badge" style="background:rgba(255,255,255,.2);color:#fff;border:1px solid rgba(255,255,255,.3)">

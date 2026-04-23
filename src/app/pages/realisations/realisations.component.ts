@@ -2,12 +2,13 @@ import { Component, ChangeDetectionStrategy, inject, signal } from '@angular/cor
 import { RouterLink } from '@angular/router';
 import { DataService } from '../../core/services/data.service';
 import { RevealDirective } from '../../shared/directives/scroll-reveal.directive';
+import { SafeHtmlPipe } from '../../shared/pipes/safe-html.pipe';
 import { Realisation } from '../../core/models';
 
 @Component({
   selector: 'app-realisations',
   standalone: true,
-  imports: [RouterLink, RevealDirective],
+  imports: [RouterLink, RevealDirective, SafeHtmlPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './realisations.component.html',
   styleUrl: './realisations.component.scss'
@@ -20,9 +21,9 @@ export class RealisationsComponent {
 
   readonly filters = [
     { id: 'all',       label: 'Toutes' },
-    { id: 'entreprise',label: '🏢 Entreprise' },
-    { id: 'esiea',     label: '🎓 ESIEA' },
-    { id: 'evenement', label: '🎉 Événement' },
+    { id: 'entreprise',label: 'Entreprise' },
+    { id: 'esiea',     label: 'ESIEA' },
+    { id: 'evenement', label: 'Événement' },
   ];
 
   get filteredRealisations(): Realisation[] {

@@ -29,7 +29,11 @@
 
             <!-- Cover -->
             <div class="real-card__cover" [style.background]="r.coverGradient">
-              <span class="real-card__emoji">{{ r.emoji }}</span>
+              @if (r.svg) {
+                <span class="real-card__emoji" style="color:white" [innerHTML]="r.svg | safeHtml"></span>
+              } @else {
+                <span class="real-card__emoji">{{ r.emoji }}</span>
+              }
               <div class="real-card__cover-overlay"></div>
               <span class="real-card__type">
                 @switch (r.type) {

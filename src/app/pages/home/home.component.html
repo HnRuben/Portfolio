@@ -64,7 +64,11 @@
         @for (r of realisations; track r.id; let i = $index) {
           <a [routerLink]="['/realisations', r.id]" class="real-card card" appReveal [revealDelay]="i * 80">
             <div class="real-card__cover" [style.background]="r.coverGradient">
-              <span class="real-card__emoji">{{ r.emoji }}</span>
+              @if (r.svg) {
+                <span class="real-card__emoji" style="color:white" [innerHTML]="r.svg | safeHtml"></span>
+              } @else {
+                <span class="real-card__emoji">{{ r.emoji }}</span>
+              }
               <span class="real-card__type-badge badge">
                 @switch (r.type) {
                   @case ('entreprise') { 🏢 Entreprise }
