@@ -10,16 +10,36 @@
     <!-- Desktop links -->
     <ul class="navbar__links">
       @for (link of navLinks; track link.path) {
-        <li>
-          <a
-            [routerLink]="link.path"
-            routerLinkActive="active"
-            class="navbar__link"
-          >{{ link.label }}</a>
-        </li>
+        @if (link.dropdown) {
+          <li class="navbar__item--has-dropdown"
+              (mouseenter)="openMenu(link.dropdown)"
+              (mouseleave)="closeMenu()">
+            <a [routerLink]="link.path" routerLinkActive="active" class="navbar__link navbar__link--trigger">
+              {{ link.label }}
+              <svg class="navbar__chevron" [class.navbar__chevron--open]="openDropdown() === link.dropdown"
+                   width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </a>
+            <div class="navbar__dropdown" [class.navbar__dropdown--open]="openDropdown() === link.dropdown">
+              @if (link.dropdown === 'competences') {
+                @for (item of competenceItems; track item.path) {
+                  <a [routerLink]="item.path" class="navbar__dropdown-item" (click)="closeMenu()">{{ item.label }}</a>
+                }
+              } @else {
+                @for (item of realisationItems; track item.path) {
+                  <a [routerLink]="item.path" class="navbar__dropdown-item" (click)="closeMenu()">{{ item.label }}</a>
+                }
+              }
+            </div>
+          </li>
+        } @else {
+          <li>
+            <a [routerLink]="link.path" routerLinkActive="active" class="navbar__link">{{ link.label }}</a>
+          </li>
+        }
       }
     </ul>
-
 
     <!-- Burger -->
     <button class="navbar__burger" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()">
@@ -31,11 +51,35 @@
   <div class="navbar__mobile" [class.navbar__mobile--open]="menuOpen()">
     <ul class="navbar__mobile-links">
       @for (link of navLinks; track link.path) {
-        <li>
-          <a [routerLink]="link.path" routerLinkActive="active" class="navbar__mobile-link">
-            {{ link.label }}
-          </a>
-        </li>
+        @if (link.dropdown) {
+          <li>
+            <button class="navbar__mobile-link navbar__mobile-toggle"
+                    (click)="toggleMobileDropdown(link.dropdown)">
+              {{ link.label }}
+              <svg class="navbar__chevron" [class.navbar__chevron--open]="openDropdown() === link.dropdown"
+                   width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </button>
+            <div class="navbar__mobile-sub" [class.navbar__mobile-sub--open]="openDropdown() === link.dropdown">
+              @if (link.dropdown === 'competences') {
+                @for (item of competenceItems; track item.path) {
+                  <a [routerLink]="item.path" class="navbar__mobile-sub-link">{{ item.label }}</a>
+                }
+              } @else {
+                @for (item of realisationItems; track item.path) {
+                  <a [routerLink]="item.path" class="navbar__mobile-sub-link">{{ item.label }}</a>
+                }
+              }
+            </div>
+          </li>
+        } @else {
+          <li>
+            <a [routerLink]="link.path" routerLinkActive="active" class="navbar__mobile-link">
+              {{ link.label }}
+            </a>
+          </li>
+        }
       }
       <li>
         <a routerLink="/contact" class="btn btn--primary" style="width:100%;justify-content:center;">
