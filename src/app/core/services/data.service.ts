@@ -284,7 +284,7 @@ export class DataService {
         },
         {
           title: `Communication visuelle de l'événement Dessin Vivant`,
-          content: `Pour l'évènement Dessin Vivant, j'ai pris en charge la création de l'identité visuelle complète de l'événement : logo, affiches, flyers, visuels pour les réseaux sociaux. En m'appuyant sur Canva et ma sensibilité au design, j'ai conçu moi même une communication cohérente et attrayante qui a contribué directement à l'attractivité de l'événement. Cette dimension créative, qui moins visible dans le développement logiciel pur, est pourtant celle qui m'a le plus naturellement attiré lors de l'organisation de cet événement.`,
+          content: `Pour l'évènement Dessin Vivant, j'ai pris en charge la création de l'identité visuelle complète de l'événement : logo, affiches, flyers, visuels pour les réseaux sociaux. En m'appuyant sur **Canva** et ma sensibilité au design, j'ai conçu moi même une communication cohérente et attrayante qui a contribué directement à l'attractivité de l'événement. Cette dimension créative, qui moins visible dans le développement logiciel pur, est pourtant celle qui m'a le plus naturellement attiré lors de l'organisation de cet événement.`,
           result: `47 participants sur les 50 attendus, avec une communication visuelle saluée par notre équipe pédagogique comme l'un des points forts de l'organisation.`,
           realisationId: 'dessin-vivant'
         }
@@ -454,7 +454,7 @@ export class DataService {
       objective: `Créer un événement culturel immersif autour de la culture japonaise au sein de l'école, en transformant cinq salles en espaces de visionnage thématiques et en proposant un buffet japonais et chinois en partenariat avec un fournisseur local. L'objectif était de réunir 50 participants dans un cadre unique, à mi-chemin entre soirée cinéma et découverte culturelle.`,
       actions: [
         `Analyse du projet par une méthodologie SMART et une étude SWOT, avec plans de gestion des risques (panne matériel, affluence insuffisante, etc.).`,
-        `Création de l'identité visuelle de l'événement (logo, affiches, flyers) et déploiement d'une campagne de communication multicanale (Instagram, mails, affichage physique).`,
+        `Création de l'identité visuelle de l'événement sur **Canva** (logo, affiches, flyers) et déploiement d'une campagne de communication multicanale (**Instagram**, mails, affichage physique).`,
         `Mise en place de partenariats avec le "Club Anime" (prêt de comptes streaming) et l'évènement "In'Con" (promotion croisée), et coordination avec le restaurant "Lucky Box" pour le buffet à prix abordables.`,
         `Organisation logistique le jour J : répartition des bénévoles, gestion du buffet et suivi des diffusions simultanées sur les cinq salles.`
       ],
