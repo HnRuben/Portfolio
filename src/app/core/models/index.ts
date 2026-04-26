@@ -61,4 +61,6 @@ export interface Experience {
   details?: string;
   relatedRealisations?: string[];
   relatedCompetences?: string[];
+  logoUrl?: string;
+  websiteUrl?: string;
 }

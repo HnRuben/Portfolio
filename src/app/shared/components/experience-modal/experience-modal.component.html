@@ -3,7 +3,18 @@
 
     <button class="modal__close" (click)="close()" aria-label="Fermer">✕</button>
 
-    <div class="modal__header">
+    <div class="modal__header" [class.modal__header--has-logo]="experience().logoUrl">
+      @if (experience().logoUrl) {
+        @if (experience().websiteUrl) {
+          <a [href]="experience().websiteUrl" target="_blank" rel="noopener noreferrer" class="modal__logo-link">
+            <img [src]="experience().logoUrl" [alt]="experience().company" class="modal__logo" (error)="$any($event.target).style.display='none'">
+          </a>
+        } @else {
+          <div class="modal__logo-wrap">
+            <img [src]="experience().logoUrl" [alt]="experience().company" class="modal__logo" (error)="$any($event.target).parentElement!.style.display='none'">
+          </div>
+        }
+      }
       <div class="modal__badge badge"
            [class.badge--accent]="experience().type === 'alternance'"
            [class.badge--tech]="experience().type === 'stage' || experience().type === 'formation'">
@@ -27,7 +38,6 @@
         }
       </div>
       <h2 class="modal__role">{{ experience().role }}</h2>
-      <p class="modal__company">{{ experience().company }}</p>
       <div class="modal__meta">
         <span class="label">{{ experience().period }}</span>
         <span class="modal__location">
@@ -35,6 +45,7 @@
           {{ experience().location }}
         </span>
       </div>
+      <p class="modal__company">{{ experience().company }}</p>
     </div>
 
     <div class="modal__body">

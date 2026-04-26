@@ -67,11 +67,18 @@
     }
   }
 
+  &__card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
   &__cta {
     display: flex;
     align-items: center;
     gap: .375rem;
-    margin-top: 1rem;
     font-size: .8125rem;
     font-weight: 600;
     color: var(--color-accent);
@@ -109,6 +116,36 @@
     font-size: .9375rem;
     font-weight: 600;
     color: var(--color-accent);
+  }
+
+  &__logo {
+    display: block;
+    height: 40px;
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
+  }
+
+  &__logo-wrap,
+  &__logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem .75rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    line-height: 0;
+  }
+
+  &__logo-link {
+    text-decoration: none;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+
+    &:hover {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px var(--color-accent-light);
+    }
   }
 
   &__period {

@@ -48,8 +48,13 @@
   }
 
   &__header {
+    position: relative;
     padding: 1.75rem 1.75rem 1.25rem;
     border-bottom: 1px solid var(--color-border);
+
+    &--has-logo {
+      padding-right: calc(2rem + 32px + 130px + 1.5rem);
+    }
   }
 
   &__badge {
@@ -70,8 +75,44 @@
     font-size: .9375rem;
     font-weight: 600;
     color: var(--color-accent);
-    margin-bottom: .625rem;
+    margin-top: .5rem;
+    margin-bottom: 0;
   }
+
+  &__logo {
+    display: block;
+    height: 40px;
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
+  }
+
+  &__logo-wrap,
+  &__logo-link {
+    position: absolute;
+    top: 1.5rem;
+    right: calc(1rem + 32px + 1rem);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem .75rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    line-height: 0;
+  }
+
+  &__logo-link {
+    text-decoration: none;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+
+    &:hover {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px var(--color-accent-light);
+    }
+  }
+
+  &__company-row { display: contents; }
 
   &__meta {
     display: flex;

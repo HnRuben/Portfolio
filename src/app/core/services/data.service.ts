@@ -485,7 +485,9 @@ export class DataService {
       tags: ['Java Spring', 'Angular', 'Git', 'CI/CD', 'Agile'],
       details: `La CodeFactory d'Aubay est une structure dédiée à la montée en compétences des alternants et stagiaires sur des projets web réels pour des clients internes. J'y travaille au sein d'une équipe agile sur des applications métier complexes avec des exigences proches de celles d'un environnement de production : revues de code croisées, pipeline CI/CD Jenkins/SonarQube, respect des bonnes pratiques et livraisons régulières. Cette immersion professionnelle m'a permis de développer une vraie maîtrise des environnements de développement modernes.`,
       relatedRealisations: ['m-a-web'],
-      relatedCompetences: ['java-spring', 'angular', 'git', 'cicd', 'api-rest', 'algorithmique', 'agilite', 'travail-equipe', 'adaptabilite']
+      relatedCompetences: ['java-spring', 'angular', 'git', 'cicd', 'api-rest', 'algorithmique', 'agilite', 'travail-equipe', 'adaptabilite'],
+      logoUrl: 'logos/aubay.png',
+      websiteUrl: 'https://aubay.com/'
     },
     {
       id: 'formation-esiea',
@@ -498,7 +500,9 @@ export class DataService {
       tags: ['Java Spring', 'Angular', 'Python', 'Machine Learning', 'DevOps', 'Architecture'],
       details: `L'ESIEA est une école d'ingénieurs reconnue dont la pédagogie s'appuie sur des projets pratiques en groupe et sur l'alternance en entreprise. Ce Mastère Expert 100% distanciel m'a appris à m'organiser de manière autonome tout en progressant sur des sujets avancés : intelligence artificielle, architectures distribuées, DevOps et sécurité. Le format alternance permet une mise en pratique immédiate des concepts abordés en cours, dans un contexte professionnel réel.`,
       relatedRealisations: [],
-      relatedCompetences: ['java-spring', 'api-rest', 'git', 'cicd', 'algorithmique', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite']
+      relatedCompetences: ['java-spring', 'api-rest', 'git', 'cicd', 'algorithmique', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite'],
+      logoUrl: 'logos/esiea.png',
+      websiteUrl: 'https://www.esiea.fr'
     },
     {
       id: 'stage-aubay',
@@ -511,7 +515,9 @@ export class DataService {
       tags: ['Java Spring', 'Microsoft Entra', 'LDAP', 'API REST', 'GitLab CI/CD', 'Sécurité'],
       details: `Aubay est une entreprise de services numériques (ESN) spécialisée dans l'accompagnement de grandes entreprises dans leur transformation digitale. La DSIE (Direction Systèmes d'Information Études) est le pôle interne en charge des outils informatiques de l'entreprise. Ce stage m'a permis de découvrir le monde professionnel dans un contexte de code legacy avec de vraies contraintes de compatibilité, de sécurité et de performance, très différentes des projets académiques.`,
       relatedRealisations: ['m-a-web'],
-      relatedCompetences: ['java-spring', 'git', 'cicd', 'api-rest', 'travail-equipe', 'adaptabilite']
+      relatedCompetences: ['java-spring', 'git', 'cicd', 'api-rest', 'travail-equipe', 'adaptabilite'],
+      logoUrl: 'logos/aubay.png',
+      websiteUrl: 'https://aubay.com/'
     },
     {
       id: 'formation-bachelor',
@@ -524,7 +530,9 @@ export class DataService {
       tags: ['Java', 'JavaScript', 'C#', 'Unity', 'VueJs', 'SQL', 'Agile'],
       details: `L'ESIEA propose un Bachelor en développement logiciel centré sur la pratique par projets. Chaque semestre est rythmé par un projet de groupe ambitieux, confrontant les étudiants à des problématiques concrètes de développement et les formant à travailler en équipe dans un cadre agile. Cette approche pédagogique par le concret m'a donné de solides bases techniques et humaines avant d'entrer dans le monde professionnel.`,
       relatedRealisations: ['simulateur-darwinien', 'bot-discord', 'jeu-2d-runner', 'dessin-vivant'],
-      relatedCompetences: ['algorithmique', 'git', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite']
+      relatedCompetences: ['algorithmique', 'git', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite'],
+      logoUrl: 'logos/esiea.png',
+      websiteUrl: 'https://www.esiea.fr'
     }
   ];
 

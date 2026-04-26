@@ -65,9 +65,22 @@
                   }
                 </div>
               }
-              <div class="timeline-item__cta">
-                <span>Voir les détails</span>
-                <span class="timeline-item__cta-arrow">→</span>
+              <div class="timeline-item__card-footer">
+                <div class="timeline-item__cta">
+                  <span>Voir les détails</span>
+                  <span class="timeline-item__cta-arrow">→</span>
+                </div>
+                @if (exp.logoUrl) {
+                  @if (exp.websiteUrl) {
+                    <a [href]="exp.websiteUrl" target="_blank" rel="noopener noreferrer" class="timeline-item__logo-link" (click)="$event.stopPropagation()">
+                      <img [src]="exp.logoUrl" [alt]="exp.company" class="timeline-item__logo" (error)="$any($event.target).style.display='none'">
+                    </a>
+                  } @else {
+                    <div class="timeline-item__logo-wrap">
+                      <img [src]="exp.logoUrl" [alt]="exp.company" class="timeline-item__logo" (error)="$any($event.target).parentElement!.style.display='none'">
+                    </div>
+                  }
+                }
               </div>
             </div>
           </div>
