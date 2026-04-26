@@ -50,7 +50,6 @@ export class AboutComponent {
     'Escalade',
     'Création graphique',
     'Jeux vidéo',
-    'IA & Machine Learning',
     'Architecture logicielle'
   ];
 }
