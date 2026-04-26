@@ -369,7 +369,7 @@ export class DataService {
       period: '2023 – 2024',
       coverGradient: 'linear-gradient(135deg, #7C3AED 0%, #EC4899 100%)',
       shortDescription: `Simulation interactive de l'évolution darwinienne en 3D sous Unity, avec des agents autonomes évoluant via un système de réseaux de neurones NEAT.`,
-      context: `**DarwinSimulator** est un projet étudiant réalisé en équipe de quatre personnes au semestre 6 de ma formation à l'ESIEA. Passionné par les concepts d'intelligence artificielle et par la théorie de l'évolution, nous avons décidé de concevoir une simulation qui mettrait en œuvre ces deux domaines de manière concrète et visuelle, à travers un environnement 3D développé sous **Unity**.`,
+      context: `**DarwinSimulator** est un projet étudiant réalisé en équipe de quatre personnes au semestre 6 de ma formation à l'ESIEA. Intéréssé par les concepts d'intelligence artificielle et par la théorie de l'évolution, nous avons décidé de concevoir une simulation qui mettrait en œuvre ces deux domaines de manière concrète et visuelle, à travers un environnement 3D développé sous **Unity**.`,
       objective: `Concevoir une simulation interactive de l'évolution darwinienne, où des agents autonomes (NPCs) évoluent dans un environnement 3D selon les principes de la sélection naturelle. Les utilisateurs peuvent configurer les paramètres de simulation (taille de carte, nombre de NPCs, densité de ressources) et observer en temps réel l'émergence de comportements optimisés au fil des générations.`,
       actions: [
         `Développement du module de gestion du terrain et des ressources : génération procédurale de la carte, spawn de nourriture et placement des obstacles.`,
