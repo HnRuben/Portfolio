@@ -19,7 +19,7 @@ export class DataService {
   experiences: Experience[] = [];
 
   load(): Observable<void> {
-    return this.http.get<PortfolioData>('assets/data.json').pipe(
+    return this.http.get<PortfolioData>('data.json').pipe(
       tap(data => {
         this.competences = data.competences;
         this.realisations = data.realisations;

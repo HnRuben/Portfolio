@@ -10,7 +10,7 @@ const os = require('os');
 
 const projectRoot = path.join(__dirname, '..');
 const tsPath = path.join(projectRoot, 'src/app/core/services/data.service.ts');
-const outputPath = path.join(projectRoot, 'src/assets/data.json');
+const outputPath = path.join(projectRoot, 'public/data.json');
 
 let src = fs.readFileSync(tsPath, 'utf8');
 

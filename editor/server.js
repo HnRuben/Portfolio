@@ -5,7 +5,7 @@ const path = require('path');
 
 const app = express();
 const PORT = 3001;
-const DATA_PATH = path.join(__dirname, '../src/assets/data.json');
+const DATA_PATH = path.join(__dirname, '../public/data.json');
 
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
