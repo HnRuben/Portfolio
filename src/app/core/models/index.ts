@@ -24,6 +24,11 @@ export interface Anecdote {
   realisationId?: string;
 }
 
+export interface RealisationImage {
+  src: string;
+  caption?: string;
+}
+
 export interface Realisation {
   id: string;
   title: string;
@@ -47,6 +52,7 @@ export interface Realisation {
   regardCritique: string;
   techStack: string[];
   competences: string[];
+  images?: RealisationImage[];
 }
 
 export interface Experience {

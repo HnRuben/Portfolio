@@ -355,7 +355,8 @@ export class DataService {
       lendemains: `Dans les semaines qui ont suivi le début de mon alternance, ma montée en compétence a été rapide : j'étais autonome sur les tickets de mon niveau dès le premier sprint, et j'ai commencé à faire des revues de code pour d'autres assez vite. Avec le recul, FabTools a vraiment été le projet qui m'a ancré dans une vraie façon de travailler. Aujourd'hui je suis encore en poste sur ce projet, et mon périmètre s'est élargi : je prends des tickets plus complexes, je participe à des décisions techniques, et j'ai une vision globale de l'application que je n'avais clairement pas en arrivant.`,
       regardCritique: `Ma valeur ajoutée sur ce projet a été d'être quelqu'un de fiable et non-bloquant pour l'équipe, surtout au début. Arriver en alternance dans une équipe avec des conventions établies et du code existant, c'est pas toujours évident, et ce que j'ai retenu c'est que le plus important c'est de lire avant d'écrire. Ce projet m'a aussi confronté à une réalité que les projets scolaires cachent : les vrais utilisateurs ont des besoins qui évoluent et qui ne sont pas toujours bien formulés. Si je devais refaire quelque chose différemment, ce serait de documenter plus systématiquement mes décisions techniques au fil des tickets, pour ne pas perdre de la connaissance quand les gens tournent dans l'équipe.`,
       techStack: ['Java Spring', 'Angular', 'Git', 'CI/CD', 'API Rest', 'Algorithmique'],
-      competences: ['java-spring', 'angular', 'git', 'cicd', 'api-rest', 'algorithmique', 'agilite', 'travail-equipe', 'adaptabilite']
+      competences: ['java-spring', 'angular', 'git', 'cicd', 'api-rest', 'algorithmique', 'agilite', 'travail-equipe', 'adaptabilite'],
+      images: []
     },
     {
       id: 'simulateur-darwinien',
@@ -383,7 +384,8 @@ export class DataService {
       lendemains: `Juste après la présentation, le projet a été très bien reçu par nos enseignants, notamment pour l'ambition du sujet et la qualité de l'interface de visualisation. Avec le recul, c'est directement ce projet qui m'a orienté vers le Mastère Expert en ingénierie de l'IA : c'est en travaillant sur le NEAT que j'ai vraiment réalisé à quel point ce domaine m'intéressait. Aujourd'hui je cite régulièrement DarwinSimulator quand on me demande d'illustrer ma capacité à attaquer des problèmes algorithmiques complexes, parce que c'est clairement l'expérience qui m'a le plus formé à ce niveau.`,
       regardCritique: `Ce que j'ai surtout apporté sur ce projet c'est la rigueur sur les modules dont j'avais la charge : le terrain et l'interface de visualisation étaient fonctionnels, stables et bien intégrés au reste. Ce que j'aurais fait différemment, c'est définir plus tôt les interfaces entre nos modules : on a perdu du temps à recalibrer certaines choses parce qu'on n'avait pas assez anticipé comment les parties allaient se connecter. L'enseignement principal que j'en retire : sur un projet de cette complexité sous **Unity**, la phase de conception et la définition des contrats entre modules valent autant que le code lui-même.`,
       techStack: ['Unity', 'C#', 'NEAT', 'Algorithmique', 'Git'],
-      competences: ['algorithmique', 'git', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite']
+      competences: ['algorithmique', 'git', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite'],
+      images: []
     },
     {
       id: 'bot-discord',
@@ -411,7 +413,8 @@ export class DataService {
       lendemains: `La présentation du projet a bien marqué les esprits pour son originalité, c'était clairement l'un des projets les plus créatifs de la promo cette année-là. Avec le recul, D3 a installé en moi un réflexe que j'ai encore aujourd'hui : questionner le parti pris d'une interface avant de la faire classique par défaut. Le projet n'est plus maintenu, c'était un projet scolaire, mais les compétences en conception d'API REST que j'y ai développées sont directement celles que j'utilise en entreprise au quotidien.`,
       regardCritique: `Le vrai point fort de D3 c'était l'idée de départ, et c'est quelque chose dont je suis assez fier parce que dans un contexte académique où beaucoup de projets se ressemblent, proposer quelque chose d'aussi différent c'est rare. Là où on aurait pu faire mieux, c'est sur la synchronisation en temps réel entre le bot et l'interface web : on avait sous-estimé la complexité de garder les deux côtés cohérents en permanence, et c'était parfois fragile. Ce que j'en retiens : une bonne idée créative sans une architecture solide derrière, ça tient pas longtemps.`,
       techStack: ['Node.js', 'Vue.js', 'Express', 'API Rest', 'Git', 'Algorithmique'],
-      competences: ['api-rest', 'git', 'algorithmique', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite']
+      competences: ['api-rest', 'git', 'algorithmique', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite'],
+      images: []
     },
     {
       id: 'jeu-2d-runner',
@@ -440,7 +443,10 @@ export class DataService {
       lendemains: `La présentation aux TechDays s'est très bien passée, et voir des gens jouer à notre jeu sur place c'était une satisfaction assez particulière pour un projet de cours. Dans les semaines qui ont suivi, j'ai réalisé à quel point le travail sur la physique et les collisions m'avait donné des réflexes très différents de ceux qu'on développe en faisant du web. Aujourd'hui, les patterns MVC et EventBus que j'ai utilisés sur C2 sont directement ceux que je retrouve dans Spring Boot et Angular, juste avec des noms différents.`,
       regardCritique: `Ce que j'ai apporté sur ce projet c'était principalement le moteur physique et l'interface utilisateur, deux parties qui demandaient de la précision et du débogage patient. On a livré quelque chose de complet et jouable, dont je suis fier. Ce qu'on aurait pu mieux faire : tester le jeu avec de vrais joueurs avant la présentation plutôt qu'entre nous, parce qu'on avait des angles morts sur la difficulté et certains bugs qu'on ne voyait plus à force de jouer. Ce projet m'a appris qu'un code qui compile et fonctionne pour le développeur, c'est pas la même chose qu'un produit vraiment fini.`,
       techStack: ['Java', 'JavaFX', 'Architecture MVC', 'Algorithmique', 'Git'],
-      competences: ['algorithmique', 'git', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite']
+      competences: ['algorithmique', 'git', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite'],
+      images: [
+        { src: 'realisations/jeu-2d-runner/affiche.png', caption: 'Affiche de l\'événement pour TechDays' },
+      ]
     },
     {
       id: 'dessin-vivant',
@@ -469,7 +475,18 @@ export class DataService {
       lendemains: `Le lendemain de l'événement, les retours des participants étaient vraiment positifs, ce qui a validé les choix qu'on avait faits sur la communication et la sélection des animés. Dans les semaines qui ont suivi, j'ai pu réinvestir les compétences visuelles développées pour cet événement, notamment dans la création de supports pour d'autres projets scolaires. Aujourd'hui, ce que je retiens surtout de Dessin Vivant c'est que j'ai une vraie capacité à m'impliquer sur des projets non-techniques, et que la créativité graphique mobilisée ici continue de teinter ma façon d'aborder les interfaces et la communication visuelle en général.`,
       regardCritique: `Ma valeur ajoutée principale sur cet événement c'est clairement la dimension visuelle : l'identité graphique que j'ai créée a donné une vraie cohérence à la communication, et ça s'est ressenti dans l'attractivité auprès des étudiants. Ce qu'on aurait pu améliorer, c'est l'estimation du temps que prennent les tâches non-techniques : on a sous-estimé le temps de relance des partenaires et la coordination logistique, ce qui a créé quelques tensions la semaine avant l'événement. L'enseignement que j'en retire : même dans un projet créatif, la gestion de planning et l'anticipation des délais, c'est ce qui fait la différence entre un projet qui se passe bien et un projet qui se passe bien malgré tout.`,
       techStack: [],
-      competences: ['travail-equipe', 'adaptabilite', 'creativite']
+      competences: ['travail-equipe', 'adaptabilite', 'creativite'],
+      images: [
+        { src: 'realisations/dessin-vivant/affiche1.png', caption: 'Affiche communication de l\'événement' },
+        { src: 'realisations/dessin-vivant/affiche2.png', caption: 'Affiche communication de l\'événement' },
+        { src: 'realisations/dessin-vivant/affiche3.png', caption: 'Affiche communication de l\'événement' },
+        { src: 'realisations/dessin-vivant/flyer1.png',   caption: 'Flyer de communication recto' },
+        { src: 'realisations/dessin-vivant/flyer2.png',   caption: 'Flyer de communication verso' },
+        { src: 'realisations/dessin-vivant/carte.png',   caption: 'Carte Lucky Box (partenaire)' },
+        { src: 'realisations/dessin-vivant/programme.png',   caption: 'Animés à la carte !' }
+
+
+      ]
     }
   ];
 
