@@ -385,7 +385,9 @@ export class DataService {
       regardCritique: `Ce que j'ai surtout apporté sur ce projet c'est la rigueur sur les modules dont j'avais la charge : le terrain et l'interface de visualisation étaient fonctionnels, stables et bien intégrés au reste. Ce que j'aurais fait différemment, c'est définir plus tôt les interfaces entre nos modules : on a perdu du temps à recalibrer certaines choses parce qu'on n'avait pas assez anticipé comment les parties allaient se connecter. L'enseignement principal que j'en retire : sur un projet de cette complexité sous **Unity**, la phase de conception et la définition des contrats entre modules valent autant que le code lui-même.`,
       techStack: ['Unity', 'C#', 'NEAT', 'Algorithmique', 'Git'],
       competences: ['algorithmique', 'git', 'agilite', 'travail-equipe', 'adaptabilite', 'creativite'],
-      images: []
+      images: [
+        { src: 'realisations/simulateur-darwinien/menu.png', caption: 'Menu de configuration' },
+      ]
     },
     {
       id: 'bot-discord',
